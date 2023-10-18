@@ -305,8 +305,6 @@ Public Class Dashboard
                 Return Color.Purple
             Case "Psychiatry"
                 Return Color.Gold
-            Case Else
-                Return Color.Gray ' สีเทาหากไม่ระบุห้อง
         End Select
     End Function
 
