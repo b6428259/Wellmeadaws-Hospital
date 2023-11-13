@@ -53,6 +53,17 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=124.121.233.223\SQLEXPRESS,1433;Initial Catalog=Project;User ID=admin"& _ 
+            "")>  _
+        Public ReadOnly Property AppointData() As String
+            Get
+                Return CType(Me("AppointData"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

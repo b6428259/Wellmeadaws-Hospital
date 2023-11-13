@@ -22,273 +22,280 @@ Partial Class StaffAllocation
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(StaffAllocation))
-        DataGridView1 = New DataGridView()
-        TextBox11 = New TextBox()
-        TextBoxAllocateID = New TextBox()
-        Label13 = New Label()
-        Button3 = New Button()
-        Button2 = New Button()
-        Button1 = New Button()
-        txtBoxWardID = New TextBox()
-        txtBoxWeekEnd = New TextBox()
-        txtBoxWeekBegin = New TextBox()
-        wardtoallocate = New Label()
-        txtBoxShift = New TextBox()
-        weekend = New Label()
-        shift = New Label()
-        weekbegin = New Label()
-        txtBoxStaffID = New TextBox()
-        staffid = New Label()
-        Label1 = New Label()
-        Panel1 = New Panel()
-        btnsearchstaffallo = New PictureBox()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
-        Panel1.SuspendLayout()
-        CType(btnsearchstaffallo, ComponentModel.ISupportInitialize).BeginInit()
-        SuspendLayout()
-        ' 
-        ' DataGridView1
-        ' 
-        DataGridView1.BorderStyle = BorderStyle.Fixed3D
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(64, 400)
-        DataGridView1.Margin = New Padding(3, 4, 3, 4)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.RowHeadersWidth = 51
-        DataGridView1.RowTemplate.Height = 25
-        DataGridView1.Size = New Size(1131, 356)
-        DataGridView1.TabIndex = 65
-        ' 
-        ' TextBox11
-        ' 
-        TextBox11.BorderStyle = BorderStyle.FixedSingle
-        TextBox11.Location = New Point(976, 348)
-        TextBox11.Margin = New Padding(3, 4, 3, 4)
-        TextBox11.Name = "TextBox11"
-        TextBox11.Size = New Size(167, 27)
-        TextBox11.TabIndex = 64
-        ' 
-        ' TextBoxAllocateID
-        ' 
-        TextBoxAllocateID.BorderStyle = BorderStyle.FixedSingle
-        TextBoxAllocateID.Location = New Point(103, 348)
-        TextBoxAllocateID.Margin = New Padding(3, 4, 3, 4)
-        TextBoxAllocateID.Name = "TextBoxAllocateID"
-        TextBoxAllocateID.Size = New Size(114, 27)
-        TextBoxAllocateID.TabIndex = 63
-        ' 
-        ' Label13
-        ' 
-        Label13.AutoSize = True
-        Label13.Location = New Point(69, 353)
-        Label13.Name = "Label13"
-        Label13.Size = New Size(31, 20)
-        Label13.TabIndex = 62
-        Label13.Text = "ID :"
-        ' 
-        ' Button3
-        ' 
-        Button3.BackColor = Color.FromArgb(CByte(252), CByte(136), CByte(136))
-        Button3.Location = New Point(651, 309)
-        Button3.Margin = New Padding(3, 4, 3, 4)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(86, 31)
-        Button3.TabIndex = 60
-        Button3.Text = "DELETE"
-        Button3.UseVisualStyleBackColor = False
-        ' 
-        ' Button2
-        ' 
-        Button2.BackColor = Color.FromArgb(CByte(241), CByte(227), CByte(86))
-        Button2.Location = New Point(549, 309)
-        Button2.Margin = New Padding(3, 4, 3, 4)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(86, 31)
-        Button2.TabIndex = 59
-        Button2.Text = "EDIT"
-        Button2.UseVisualStyleBackColor = False
-        ' 
-        ' Button1
-        ' 
-        Button1.BackColor = Color.FromArgb(CByte(179), CByte(255), CByte(143))
-        Button1.Location = New Point(443, 309)
-        Button1.Margin = New Padding(3, 4, 3, 4)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(86, 31)
-        Button1.TabIndex = 58
-        Button1.Text = "ADD"
-        Button1.UseVisualStyleBackColor = False
-        ' 
-        ' txtBoxWardID
-        ' 
-        txtBoxWardID.BorderStyle = BorderStyle.FixedSingle
-        txtBoxWardID.Location = New Point(895, 24)
-        txtBoxWardID.Margin = New Padding(3, 4, 3, 4)
-        txtBoxWardID.Name = "txtBoxWardID"
-        txtBoxWardID.Size = New Size(164, 27)
-        txtBoxWardID.TabIndex = 54
-        ' 
-        ' txtBoxWeekEnd
-        ' 
-        txtBoxWeekEnd.BorderStyle = BorderStyle.FixedSingle
-        txtBoxWeekEnd.Location = New Point(510, 100)
-        txtBoxWeekEnd.Margin = New Padding(3, 4, 3, 4)
-        txtBoxWeekEnd.Name = "txtBoxWeekEnd"
-        txtBoxWeekEnd.Size = New Size(163, 27)
-        txtBoxWeekEnd.TabIndex = 52
-        ' 
-        ' txtBoxWeekBegin
-        ' 
-        txtBoxWeekBegin.BorderStyle = BorderStyle.FixedSingle
-        txtBoxWeekBegin.Location = New Point(149, 100)
-        txtBoxWeekBegin.Margin = New Padding(3, 4, 3, 4)
-        txtBoxWeekBegin.Name = "txtBoxWeekBegin"
-        txtBoxWeekBegin.Size = New Size(146, 27)
-        txtBoxWeekBegin.TabIndex = 50
-        ' 
-        ' wardtoallocate
-        ' 
-        wardtoallocate.AutoSize = True
-        wardtoallocate.Location = New Point(768, 28)
-        wardtoallocate.Name = "wardtoallocate"
-        wardtoallocate.Size = New Size(130, 20)
-        wardtoallocate.TabIndex = 46
-        wardtoallocate.Text = "Ward To Allocate :"
-        ' 
-        ' txtBoxShift
-        ' 
-        txtBoxShift.BorderStyle = BorderStyle.FixedSingle
-        txtBoxShift.Location = New Point(510, 31)
-        txtBoxShift.Margin = New Padding(3, 4, 3, 4)
-        txtBoxShift.Name = "txtBoxShift"
-        txtBoxShift.Size = New Size(163, 27)
-        txtBoxShift.TabIndex = 44
-        ' 
-        ' weekend
-        ' 
-        weekend.AutoSize = True
-        weekend.Location = New Point(393, 104)
-        weekend.Name = "weekend"
-        weekend.Size = New Size(102, 20)
-        weekend.TabIndex = 42
-        weekend.Text = "Week Ending :"
-        ' 
-        ' shift
-        ' 
-        shift.AutoSize = True
-        shift.Location = New Point(445, 35)
-        shift.Name = "shift"
-        shift.Size = New Size(46, 20)
-        shift.TabIndex = 41
-        shift.Text = "Shift :"
-        ' 
-        ' weekbegin
-        ' 
-        weekbegin.AutoSize = True
-        weekbegin.Location = New Point(22, 104)
-        weekbegin.Name = "weekbegin"
-        weekbegin.Size = New Size(123, 20)
-        weekbegin.TabIndex = 38
-        weekbegin.Text = "Week Beginning :"
-        ' 
-        ' txtBoxStaffID
-        ' 
-        txtBoxStaffID.BorderStyle = BorderStyle.FixedSingle
-        txtBoxStaffID.Location = New Point(149, 31)
-        txtBoxStaffID.Margin = New Padding(3, 4, 3, 4)
-        txtBoxStaffID.Name = "txtBoxStaffID"
-        txtBoxStaffID.Size = New Size(146, 27)
-        txtBoxStaffID.TabIndex = 37
-        ' 
-        ' staffid
-        ' 
-        staffid.AutoSize = True
-        staffid.Location = New Point(77, 33)
-        staffid.Name = "staffid"
-        staffid.Size = New Size(66, 20)
-        staffid.TabIndex = 36
-        staffid.Text = "Staff ID :"
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.ForeColor = SystemColors.WindowText
-        Label1.Location = New Point(512, 24)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(234, 32)
-        Label1.TabIndex = 35
-        Label1.Text = "STAFF ALLOCATION"
-        ' 
-        ' Panel1
-        ' 
-        Panel1.BorderStyle = BorderStyle.FixedSingle
-        Panel1.Controls.Add(txtBoxStaffID)
-        Panel1.Controls.Add(staffid)
-        Panel1.Controls.Add(weekbegin)
-        Panel1.Controls.Add(txtBoxWeekBegin)
-        Panel1.Controls.Add(txtBoxShift)
-        Panel1.Controls.Add(shift)
-        Panel1.Controls.Add(weekend)
-        Panel1.Controls.Add(txtBoxWeekEnd)
-        Panel1.Controls.Add(txtBoxWardID)
-        Panel1.Controls.Add(wardtoallocate)
-        Panel1.Location = New Point(80, 85)
-        Panel1.Margin = New Padding(3, 4, 3, 4)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1115, 163)
-        Panel1.TabIndex = 67
-        ' 
-        ' btnsearchstaffallo
-        ' 
-        btnsearchstaffallo.Image = CType(resources.GetObject("btnsearchstaffallo.Image"), Image)
-        btnsearchstaffallo.Location = New Point(1150, 348)
-        btnsearchstaffallo.Margin = New Padding(3, 4, 3, 4)
-        btnsearchstaffallo.Name = "btnsearchstaffallo"
-        btnsearchstaffallo.Size = New Size(41, 36)
-        btnsearchstaffallo.SizeMode = PictureBoxSizeMode.Zoom
-        btnsearchstaffallo.TabIndex = 68
-        btnsearchstaffallo.TabStop = False
-        ' 
-        ' StaffAllocation
-        ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
-        BackColor = SystemColors.ControlLightLight
-        ClientSize = New Size(1267, 772)
-        Controls.Add(btnsearchstaffallo)
-        Controls.Add(Panel1)
-        Controls.Add(DataGridView1)
-        Controls.Add(TextBox11)
-        Controls.Add(TextBoxAllocateID)
-        Controls.Add(Label13)
-        Controls.Add(Button3)
-        Controls.Add(Button2)
-        Controls.Add(Button1)
-        Controls.Add(Label1)
-        FormBorderStyle = FormBorderStyle.None
-        Name = "StaffAllocation"
-        Text = "StaffAllocation"
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
-        Panel1.ResumeLayout(False)
-        Panel1.PerformLayout()
-        CType(btnsearchstaffallo, ComponentModel.ISupportInitialize).EndInit()
-        ResumeLayout(False)
-        PerformLayout()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(StaffAllocation))
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.btndel = New System.Windows.Forms.Button()
+        Me.btnEdit = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtBoxWardID = New System.Windows.Forms.TextBox()
+        Me.wardtoallocate = New System.Windows.Forms.Label()
+        Me.weekend = New System.Windows.Forms.Label()
+        Me.shift = New System.Windows.Forms.Label()
+        Me.weekbegin = New System.Windows.Forms.Label()
+        Me.txtBoxStaffID = New System.Windows.Forms.TextBox()
+        Me.staffid = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txtBoxShift = New System.Windows.Forms.ComboBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.dtpWeekEnd = New System.Windows.Forms.DateTimePicker()
+        Me.dtpWeekBegin = New System.Windows.Forms.DateTimePicker()
+        Me.btnsearchstaffallo = New System.Windows.Forms.PictureBox()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnsearchstaffallo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(48, 260)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 25
+        Me.DataGridView1.Size = New System.Drawing.Size(978, 231)
+        Me.DataGridView1.TabIndex = 65
+        '
+        'TextBox11
+        '
+        Me.TextBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox11.Location = New System.Drawing.Point(860, 226)
+        Me.TextBox11.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.Size = New System.Drawing.Size(126, 20)
+        Me.TextBox11.TabIndex = 64
+        '
+        'btndel
+        '
+        Me.btndel.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer))
+        Me.btndel.Location = New System.Drawing.Point(615, 222)
+        Me.btndel.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.btndel.Name = "btndel"
+        Me.btndel.Size = New System.Drawing.Size(64, 20)
+        Me.btndel.TabIndex = 60
+        Me.btndel.Text = "DELETE"
+        Me.btndel.UseVisualStyleBackColor = False
+        '
+        'btnEdit
+        '
+        Me.btnEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(86, Byte), Integer))
+        Me.btnEdit.Location = New System.Drawing.Point(539, 222)
+        Me.btnEdit.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(64, 20)
+        Me.btnEdit.TabIndex = 59
+        Me.btnEdit.Text = "EDIT"
+        Me.btnEdit.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(179, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.Button1.Location = New System.Drawing.Point(459, 222)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(64, 20)
+        Me.Button1.TabIndex = 58
+        Me.Button1.Text = "ADD"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'txtBoxWardID
+        '
+        Me.txtBoxWardID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtBoxWardID.Location = New System.Drawing.Point(799, 16)
+        Me.txtBoxWardID.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.txtBoxWardID.Name = "txtBoxWardID"
+        Me.txtBoxWardID.Size = New System.Drawing.Size(124, 20)
+        Me.txtBoxWardID.TabIndex = 54
+        '
+        'wardtoallocate
+        '
+        Me.wardtoallocate.AutoSize = True
+        Me.wardtoallocate.Location = New System.Drawing.Point(704, 18)
+        Me.wardtoallocate.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.wardtoallocate.Name = "wardtoallocate"
+        Me.wardtoallocate.Size = New System.Drawing.Size(96, 13)
+        Me.wardtoallocate.TabIndex = 46
+        Me.wardtoallocate.Text = "Ward To Allocate :"
+        '
+        'weekend
+        '
+        Me.weekend.AutoSize = True
+        Me.weekend.Location = New System.Drawing.Point(364, 68)
+        Me.weekend.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.weekend.Name = "weekend"
+        Me.weekend.Size = New System.Drawing.Size(78, 13)
+        Me.weekend.TabIndex = 42
+        Me.weekend.Text = "Week Ending :"
+        '
+        'shift
+        '
+        Me.shift.AutoSize = True
+        Me.shift.Location = New System.Drawing.Point(418, 18)
+        Me.shift.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.shift.Name = "shift"
+        Me.shift.Size = New System.Drawing.Size(34, 13)
+        Me.shift.TabIndex = 41
+        Me.shift.Text = "Shift :"
+        '
+        'weekbegin
+        '
+        Me.weekbegin.AutoSize = True
+        Me.weekbegin.Location = New System.Drawing.Point(34, 68)
+        Me.weekbegin.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.weekbegin.Name = "weekbegin"
+        Me.weekbegin.Size = New System.Drawing.Size(92, 13)
+        Me.weekbegin.TabIndex = 38
+        Me.weekbegin.Text = "Week Beginning :"
+        '
+        'txtBoxStaffID
+        '
+        Me.txtBoxStaffID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtBoxStaffID.Location = New System.Drawing.Point(130, 17)
+        Me.txtBoxStaffID.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.txtBoxStaffID.Name = "txtBoxStaffID"
+        Me.txtBoxStaffID.Size = New System.Drawing.Size(110, 20)
+        Me.txtBoxStaffID.TabIndex = 37
+        '
+        'staffid
+        '
+        Me.staffid.AutoSize = True
+        Me.staffid.Location = New System.Drawing.Point(76, 21)
+        Me.staffid.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.staffid.Name = "staffid"
+        Me.staffid.Size = New System.Drawing.Size(49, 13)
+        Me.staffid.TabIndex = 36
+        Me.staffid.Text = "Staff ID :"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Label1.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.Label1.Location = New System.Drawing.Point(483, 16)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(188, 25)
+        Me.Label1.TabIndex = 35
+        Me.Label1.Text = "STAFF ALLOCATION"
+        '
+        'Panel1
+        '
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.txtBoxShift)
+        Me.Panel1.Controls.Add(Me.PictureBox2)
+        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.dtpWeekEnd)
+        Me.Panel1.Controls.Add(Me.dtpWeekBegin)
+        Me.Panel1.Controls.Add(Me.txtBoxStaffID)
+        Me.Panel1.Controls.Add(Me.staffid)
+        Me.Panel1.Controls.Add(Me.weekbegin)
+        Me.Panel1.Controls.Add(Me.shift)
+        Me.Panel1.Controls.Add(Me.weekend)
+        Me.Panel1.Controls.Add(Me.txtBoxWardID)
+        Me.Panel1.Controls.Add(Me.wardtoallocate)
+        Me.Panel1.Location = New System.Drawing.Point(60, 55)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(966, 107)
+        Me.Panel1.TabIndex = 67
+        '
+        'txtBoxShift
+        '
+        Me.txtBoxShift.FormattingEnabled = True
+        Me.txtBoxShift.Items.AddRange(New Object() {"Day Shift", "Night Shift"})
+        Me.txtBoxShift.Location = New System.Drawing.Point(457, 16)
+        Me.txtBoxShift.Name = "txtBoxShift"
+        Me.txtBoxShift.Size = New System.Drawing.Size(123, 21)
+        Me.txtBoxShift.TabIndex = 70
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(927, 16)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(31, 23)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 69
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(244, 16)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(31, 23)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 69
+        Me.PictureBox1.TabStop = False
+        '
+        'dtpWeekEnd
+        '
+        Me.dtpWeekEnd.Location = New System.Drawing.Point(457, 65)
+        Me.dtpWeekEnd.Name = "dtpWeekEnd"
+        Me.dtpWeekEnd.Size = New System.Drawing.Size(123, 20)
+        Me.dtpWeekEnd.TabIndex = 56
+        '
+        'dtpWeekBegin
+        '
+        Me.dtpWeekBegin.Location = New System.Drawing.Point(131, 65)
+        Me.dtpWeekBegin.Name = "dtpWeekBegin"
+        Me.dtpWeekBegin.Size = New System.Drawing.Size(110, 20)
+        Me.dtpWeekBegin.TabIndex = 55
+        '
+        'btnsearchstaffallo
+        '
+        Me.btnsearchstaffallo.Image = CType(resources.GetObject("btnsearchstaffallo.Image"), System.Drawing.Image)
+        Me.btnsearchstaffallo.Location = New System.Drawing.Point(990, 226)
+        Me.btnsearchstaffallo.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.btnsearchstaffallo.Name = "btnsearchstaffallo"
+        Me.btnsearchstaffallo.Size = New System.Drawing.Size(31, 23)
+        Me.btnsearchstaffallo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnsearchstaffallo.TabIndex = 68
+        Me.btnsearchstaffallo.TabStop = False
+        '
+        'StaffAllocation
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.ClientSize = New System.Drawing.Size(1073, 602)
+        Me.Controls.Add(Me.btnsearchstaffallo)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.TextBox11)
+        Me.Controls.Add(Me.btndel)
+        Me.Controls.Add(Me.btnEdit)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Name = "StaffAllocation"
+        Me.Text = "StaffAllocation"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnsearchstaffallo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents TextBoxAllocateID As TextBox
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btndel As Button
+    Friend WithEvents btnEdit As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents txtBoxWardID As TextBox
-    Friend WithEvents txtBoxWeekEnd As TextBox
-    Friend WithEvents txtBoxWeekBegin As TextBox
     Friend WithEvents wardtoallocate As Label
-    Friend WithEvents txtBoxShift As TextBox
     Friend WithEvents weekend As Label
     Friend WithEvents shift As Label
     Friend WithEvents weekbegin As Label
@@ -297,4 +304,9 @@ Partial Class StaffAllocation
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnsearchstaffallo As PictureBox
+    Friend WithEvents dtpWeekEnd As DateTimePicker
+    Friend WithEvents dtpWeekBegin As DateTimePicker
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents txtBoxShift As ComboBox
 End Class

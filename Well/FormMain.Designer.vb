@@ -22,259 +22,269 @@ Partial Class FormMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        TableLayoutPanel1 = New TableLayoutPanel()
-        PictureBox1 = New PictureBox()
-        Panel1 = New Panel()
-        Label1 = New Label()
-        MenuStrip1 = New MenuStrip()
-        STAFFToolStripMenuItem = New ToolStripMenuItem()
-        STAFFALLOCATIONToolStripMenuItem = New ToolStripMenuItem()
-        wardnav = New ToolStripMenuItem()
-        BEDToolStripMenuItem = New ToolStripMenuItem()
-        PATIENTToolStripMenuItem = New ToolStripMenuItem()
-        PATIENTALLOCATIONToolStripMenuItem = New ToolStripMenuItem()
-        INPATIENTToolStripMenuItem = New ToolStripMenuItem()
-        APPOINTMENTSToolStripMenuItem = New ToolStripMenuItem()
-        MEDICATIONToolStripMenuItem = New ToolStripMenuItem()
-        supplyList = New ToolStripMenuItem()
-        ToolStripMenuItem1 = New ToolStripMenuItem()
-        SURGICALToolStripMenuItem = New ToolStripMenuItem()
-        PHARMACEUTICALToolStripMenuItem = New ToolStripMenuItem()
-        SUPPILERToolStripMenuItem = New ToolStripMenuItem()
-        BILLSToolStripMenuItem = New ToolStripMenuItem()
-        PROFILEToolStripMenuItem = New ToolStripMenuItem()
-        StaffPanel = New Panel()
-        SURGICALSUPPLYToolStripMenuItem = New ToolStripMenuItem()
-        PHAMASUToolStripMenuItem = New ToolStripMenuItem()
-        TableLayoutPanel1.SuspendLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
-        Panel1.SuspendLayout()
-        MenuStrip1.SuspendLayout()
-        SuspendLayout()
-        ' 
-        ' TableLayoutPanel1
-        ' 
-        TableLayoutPanel1.BackColor = SystemColors.ButtonHighlight
-        TableLayoutPanel1.ColumnCount = 2
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 18.6832733F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 81.31673F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 23F))
-        TableLayoutPanel1.Controls.Add(PictureBox1, 0, 0)
-        TableLayoutPanel1.Controls.Add(Panel1, 1, 0)
-        TableLayoutPanel1.Controls.Add(MenuStrip1, 1, 1)
-        TableLayoutPanel1.Dock = DockStyle.Top
-        TableLayoutPanel1.Location = New Point(0, 0)
-        TableLayoutPanel1.Margin = New Padding(3, 4, 3, 4)
-        TableLayoutPanel1.Name = "TableLayoutPanel1"
-        TableLayoutPanel1.RowCount = 2
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 49F))
-        TableLayoutPanel1.Size = New Size(1285, 145)
-        TableLayoutPanel1.TabIndex = 0
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.BackColor = SystemColors.ButtonHighlight
-        PictureBox1.BackgroundImageLayout = ImageLayout.None
-        PictureBox1.Dock = DockStyle.Fill
-        PictureBox1.Location = New Point(3, 4)
-        PictureBox1.Margin = New Padding(3, 4, 3, 4)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(234, 88)
-        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox1.TabIndex = 0
-        PictureBox1.TabStop = False
-        ' 
-        ' Panel1
-        ' 
-        Panel1.BackColor = Color.FromArgb(CByte(12), CByte(53), CByte(106))
-        Panel1.Controls.Add(Label1)
-        Panel1.Location = New Point(240, 0)
-        Panel1.Margin = New Padding(0)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1045, 96)
-        Panel1.TabIndex = 1
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.ForeColor = Color.White
-        Label1.Location = New Point(242, 19)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(476, 55)
-        Label1.TabIndex = 0
-        Label1.Text = " Wellmeadows Hospital"
-        ' 
-        ' MenuStrip1
-        ' 
-        MenuStrip1.BackColor = Color.LightSkyBlue
-        MenuStrip1.Dock = DockStyle.Fill
-        MenuStrip1.ImageScalingSize = New Size(20, 20)
-        MenuStrip1.Items.AddRange(New ToolStripItem() {STAFFToolStripMenuItem, wardnav, PATIENTToolStripMenuItem, MEDICATIONToolStripMenuItem, supplyList, ToolStripMenuItem1, BILLSToolStripMenuItem, PROFILEToolStripMenuItem})
-        MenuStrip1.Location = New Point(240, 96)
-        MenuStrip1.Name = "MenuStrip1"
-        MenuStrip1.Padding = New Padding(0)
-        MenuStrip1.Size = New Size(1045, 49)
-        MenuStrip1.TabIndex = 2
-        MenuStrip1.Text = "MenuStrip1"
-        ' 
-        ' STAFFToolStripMenuItem
-        ' 
-        STAFFToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {STAFFALLOCATIONToolStripMenuItem})
-        STAFFToolStripMenuItem.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        STAFFToolStripMenuItem.Name = "STAFFToolStripMenuItem"
-        STAFFToolStripMenuItem.Padding = New Padding(20, 0, 20, 0)
-        STAFFToolStripMenuItem.Size = New Size(110, 49)
-        STAFFToolStripMenuItem.Text = "STAFF"
-        ' 
-        ' STAFFALLOCATIONToolStripMenuItem
-        ' 
-        STAFFALLOCATIONToolStripMenuItem.Name = "STAFFALLOCATIONToolStripMenuItem"
-        STAFFALLOCATIONToolStripMenuItem.Size = New Size(268, 30)
-        STAFFALLOCATIONToolStripMenuItem.Text = "STAFF ALLOCATION"
-        ' 
-        ' wardnav
-        ' 
-        wardnav.BackColor = Color.LightSkyBlue
-        wardnav.DropDownItems.AddRange(New ToolStripItem() {BEDToolStripMenuItem})
-        wardnav.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        wardnav.Name = "wardnav"
-        wardnav.Padding = New Padding(20, 0, 20, 0)
-        wardnav.Size = New Size(113, 49)
-        wardnav.Text = "WARD"
-        ' 
-        ' BEDToolStripMenuItem
-        ' 
-        BEDToolStripMenuItem.Name = "BEDToolStripMenuItem"
-        BEDToolStripMenuItem.Size = New Size(128, 30)
-        BEDToolStripMenuItem.Text = "BED"
-        ' 
-        ' PATIENTToolStripMenuItem
-        ' 
-        PATIENTToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {PATIENTALLOCATIONToolStripMenuItem, INPATIENTToolStripMenuItem, APPOINTMENTSToolStripMenuItem})
-        PATIENTToolStripMenuItem.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        PATIENTToolStripMenuItem.Name = "PATIENTToolStripMenuItem"
-        PATIENTToolStripMenuItem.Padding = New Padding(20, 0, 20, 0)
-        PATIENTToolStripMenuItem.Size = New Size(132, 49)
-        PATIENTToolStripMenuItem.Text = "PATIENT"
-        ' 
-        ' PATIENTALLOCATIONToolStripMenuItem
-        ' 
-        PATIENTALLOCATIONToolStripMenuItem.Name = "PATIENTALLOCATIONToolStripMenuItem"
-        PATIENTALLOCATIONToolStripMenuItem.Size = New Size(290, 30)
-        PATIENTALLOCATIONToolStripMenuItem.Text = "PATIENT ALLOCATION"
-        ' 
-        ' INPATIENTToolStripMenuItem
-        ' 
-        INPATIENTToolStripMenuItem.Name = "INPATIENTToolStripMenuItem"
-        INPATIENTToolStripMenuItem.Size = New Size(290, 30)
-        INPATIENTToolStripMenuItem.Text = "INPATIENT"
-        ' 
-        ' APPOINTMENTSToolStripMenuItem
-        ' 
-        APPOINTMENTSToolStripMenuItem.Name = "APPOINTMENTSToolStripMenuItem"
-        APPOINTMENTSToolStripMenuItem.Size = New Size(290, 30)
-        APPOINTMENTSToolStripMenuItem.Text = "APPOINTMENTS"
-        ' 
-        ' MEDICATIONToolStripMenuItem
-        ' 
-        MEDICATIONToolStripMenuItem.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        MEDICATIONToolStripMenuItem.Name = "MEDICATIONToolStripMenuItem"
-        MEDICATIONToolStripMenuItem.Padding = New Padding(20, 0, 20, 0)
-        MEDICATIONToolStripMenuItem.Size = New Size(174, 49)
-        MEDICATIONToolStripMenuItem.Text = "MEDICATION"
-        ' 
-        ' supplyList
-        ' 
-        supplyList.DropDownItems.AddRange(New ToolStripItem() {SURGICALSUPPLYToolStripMenuItem, PHAMASUToolStripMenuItem})
-        supplyList.Font = New Font("Segoe UI", 11.7818184F, FontStyle.Bold, GraphicsUnit.Point)
-        supplyList.Name = "supplyList"
-        supplyList.Size = New Size(90, 49)
-        supplyList.Text = "SUPPLY"
-        ' 
-        ' ToolStripMenuItem1
-        ' 
-        ToolStripMenuItem1.DropDownItems.AddRange(New ToolStripItem() {SURGICALToolStripMenuItem, PHARMACEUTICALToolStripMenuItem, SUPPILERToolStripMenuItem})
-        ToolStripMenuItem1.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        ToolStripMenuItem1.Padding = New Padding(20, 0, 20, 0)
-        ToolStripMenuItem1.Size = New Size(175, 49)
-        ToolStripMenuItem1.Text = "REQUISITION"
-        ' 
-        ' SURGICALToolStripMenuItem
-        ' 
-        SURGICALToolStripMenuItem.Name = "SURGICALToolStripMenuItem"
-        SURGICALToolStripMenuItem.Size = New Size(263, 30)
-        SURGICALToolStripMenuItem.Text = "SURGICAL"
-        ' 
-        ' PHARMACEUTICALToolStripMenuItem
-        ' 
-        PHARMACEUTICALToolStripMenuItem.Name = "PHARMACEUTICALToolStripMenuItem"
-        PHARMACEUTICALToolStripMenuItem.Size = New Size(263, 30)
-        PHARMACEUTICALToolStripMenuItem.Text = "PHARMACEUTICAL"
-        ' 
-        ' SUPPILERToolStripMenuItem
-        ' 
-        SUPPILERToolStripMenuItem.Name = "SUPPILERToolStripMenuItem"
-        SUPPILERToolStripMenuItem.Size = New Size(263, 30)
-        SUPPILERToolStripMenuItem.Text = "SUPPILER"
-        ' 
-        ' BILLSToolStripMenuItem
-        ' 
-        BILLSToolStripMenuItem.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        BILLSToolStripMenuItem.Name = "BILLSToolStripMenuItem"
-        BILLSToolStripMenuItem.Padding = New Padding(20, 0, 20, 0)
-        BILLSToolStripMenuItem.Size = New Size(105, 49)
-        BILLSToolStripMenuItem.Text = "BILLS"
-        ' 
-        ' PROFILEToolStripMenuItem
-        ' 
-        PROFILEToolStripMenuItem.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        PROFILEToolStripMenuItem.Name = "PROFILEToolStripMenuItem"
-        PROFILEToolStripMenuItem.Padding = New Padding(20, 0, 20, 0)
-        PROFILEToolStripMenuItem.Size = New Size(130, 49)
-        PROFILEToolStripMenuItem.Text = "PROFILE"
-        ' 
-        ' StaffPanel
-        ' 
-        StaffPanel.Dock = DockStyle.Fill
-        StaffPanel.Location = New Point(0, 145)
-        StaffPanel.Margin = New Padding(3, 4, 3, 4)
-        StaffPanel.Name = "StaffPanel"
-        StaffPanel.Size = New Size(1285, 778)
-        StaffPanel.TabIndex = 1
-        ' 
-        ' SURGICALSUPPLYToolStripMenuItem
-        ' 
-        SURGICALSUPPLYToolStripMenuItem.Name = "SURGICALSUPPLYToolStripMenuItem"
-        SURGICALSUPPLYToolStripMenuItem.Size = New Size(313, 30)
-        SURGICALSUPPLYToolStripMenuItem.Text = "SURGICAL SUPPLY"
-        ' 
-        ' PHAMASUToolStripMenuItem
-        ' 
-        PHAMASUToolStripMenuItem.Name = "PHAMASUToolStripMenuItem"
-        PHAMASUToolStripMenuItem.Size = New Size(313, 30)
-        PHAMASUToolStripMenuItem.Text = "PHAMACEUTICAL SUPPLY"
-        ' 
-        ' FormMain
-        ' 
-        AutoScaleDimensions = New SizeF(8F, 19F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1285, 923)
-        Controls.Add(StaffPanel)
-        Controls.Add(TableLayoutPanel1)
-        Margin = New Padding(3, 4, 3, 4)
-        Name = "FormMain"
-        Text = "Form1"
-        TableLayoutPanel1.ResumeLayout(False)
-        TableLayoutPanel1.PerformLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
-        Panel1.ResumeLayout(False)
-        Panel1.PerformLayout()
-        MenuStrip1.ResumeLayout(False)
-        MenuStrip1.PerformLayout()
-        ResumeLayout(False)
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.STAFFToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.STAFFALLOCATIONToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.wardnav = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BEDToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PATIENTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PATIENTALLOCATIONToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.INPATIENTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.APPOINTMENTSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MEDICATIONToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.supplyList = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SURGICALSUPPLYToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PHAMASUToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SURGICALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PHARMACEUTICALToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SUPPILERToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BILLSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PROFILEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StaffPanel = New System.Windows.Forms.Panel()
+        Me.dashboard = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TableLayoutPanel1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.68327!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.31673!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 17.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.PictureBox1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.MenuStrip1, 1, 1)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 2
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1073, 99)
+        Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(12, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Location = New System.Drawing.Point(200, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(873, 65)
+        Me.Panel1.TabIndex = 1
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 26.25!, System.Drawing.FontStyle.Bold)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(204, 9)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(407, 47)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = " Wellmeadows Hospital"
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.dashboard, Me.STAFFToolStripMenuItem, Me.wardnav, Me.PATIENTToolStripMenuItem, Me.MEDICATIONToolStripMenuItem, Me.supplyList, Me.ToolStripMenuItem1, Me.BILLSToolStripMenuItem, Me.PROFILEToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(200, 65)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(0)
+        Me.MenuStrip1.Size = New System.Drawing.Size(873, 34)
+        Me.MenuStrip1.TabIndex = 2
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'STAFFToolStripMenuItem
+        '
+        Me.STAFFToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.STAFFALLOCATIONToolStripMenuItem})
+        Me.STAFFToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.STAFFToolStripMenuItem.Name = "STAFFToolStripMenuItem"
+        Me.STAFFToolStripMenuItem.Padding = New System.Windows.Forms.Padding(20, 0, 20, 0)
+        Me.STAFFToolStripMenuItem.Size = New System.Drawing.Size(98, 34)
+        Me.STAFFToolStripMenuItem.Text = "STAFF"
+        '
+        'STAFFALLOCATIONToolStripMenuItem
+        '
+        Me.STAFFALLOCATIONToolStripMenuItem.Name = "STAFFALLOCATIONToolStripMenuItem"
+        Me.STAFFALLOCATIONToolStripMenuItem.Size = New System.Drawing.Size(226, 26)
+        Me.STAFFALLOCATIONToolStripMenuItem.Text = "STAFF ALLOCATION"
+        '
+        'wardnav
+        '
+        Me.wardnav.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.wardnav.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BEDToolStripMenuItem})
+        Me.wardnav.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.wardnav.Name = "wardnav"
+        Me.wardnav.Padding = New System.Windows.Forms.Padding(20, 0, 20, 0)
+        Me.wardnav.Size = New System.Drawing.Size(102, 34)
+        Me.wardnav.Text = "WARD"
+        '
+        'BEDToolStripMenuItem
+        '
+        Me.BEDToolStripMenuItem.Name = "BEDToolStripMenuItem"
+        Me.BEDToolStripMenuItem.Size = New System.Drawing.Size(111, 26)
+        Me.BEDToolStripMenuItem.Text = "BED"
+        '
+        'PATIENTToolStripMenuItem
+        '
+        Me.PATIENTToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PATIENTALLOCATIONToolStripMenuItem, Me.INPATIENTToolStripMenuItem, Me.APPOINTMENTSToolStripMenuItem})
+        Me.PATIENTToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.PATIENTToolStripMenuItem.Name = "PATIENTToolStripMenuItem"
+        Me.PATIENTToolStripMenuItem.Padding = New System.Windows.Forms.Padding(20, 0, 20, 0)
+        Me.PATIENTToolStripMenuItem.Size = New System.Drawing.Size(118, 34)
+        Me.PATIENTToolStripMenuItem.Text = "PATIENT"
+        '
+        'PATIENTALLOCATIONToolStripMenuItem
+        '
+        Me.PATIENTALLOCATIONToolStripMenuItem.Name = "PATIENTALLOCATIONToolStripMenuItem"
+        Me.PATIENTALLOCATIONToolStripMenuItem.Size = New System.Drawing.Size(246, 26)
+        Me.PATIENTALLOCATIONToolStripMenuItem.Text = "PATIENT ALLOCATION"
+        '
+        'INPATIENTToolStripMenuItem
+        '
+        Me.INPATIENTToolStripMenuItem.Name = "INPATIENTToolStripMenuItem"
+        Me.INPATIENTToolStripMenuItem.Size = New System.Drawing.Size(246, 26)
+        Me.INPATIENTToolStripMenuItem.Text = "INPATIENT"
+        '
+        'APPOINTMENTSToolStripMenuItem
+        '
+        Me.APPOINTMENTSToolStripMenuItem.Name = "APPOINTMENTSToolStripMenuItem"
+        Me.APPOINTMENTSToolStripMenuItem.Size = New System.Drawing.Size(246, 26)
+        Me.APPOINTMENTSToolStripMenuItem.Text = "APPOINTMENTS"
+        '
+        'MEDICATIONToolStripMenuItem
+        '
+        Me.MEDICATIONToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.MEDICATIONToolStripMenuItem.Name = "MEDICATIONToolStripMenuItem"
+        Me.MEDICATIONToolStripMenuItem.Padding = New System.Windows.Forms.Padding(20, 0, 20, 0)
+        Me.MEDICATIONToolStripMenuItem.Size = New System.Drawing.Size(154, 34)
+        Me.MEDICATIONToolStripMenuItem.Text = "MEDICATION"
+        '
+        'supplyList
+        '
+        Me.supplyList.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SURGICALSUPPLYToolStripMenuItem, Me.PHAMASUToolStripMenuItem})
+        Me.supplyList.Font = New System.Drawing.Font("Segoe UI", 11.78182!, System.Drawing.FontStyle.Bold)
+        Me.supplyList.Name = "supplyList"
+        Me.supplyList.Size = New System.Drawing.Size(80, 34)
+        Me.supplyList.Text = "SUPPLY"
+        '
+        'SURGICALSUPPLYToolStripMenuItem
+        '
+        Me.SURGICALSUPPLYToolStripMenuItem.Name = "SURGICALSUPPLYToolStripMenuItem"
+        Me.SURGICALSUPPLYToolStripMenuItem.Size = New System.Drawing.Size(275, 26)
+        Me.SURGICALSUPPLYToolStripMenuItem.Text = "SURGICAL SUPPLY"
+        '
+        'PHAMASUToolStripMenuItem
+        '
+        Me.PHAMASUToolStripMenuItem.Name = "PHAMASUToolStripMenuItem"
+        Me.PHAMASUToolStripMenuItem.Size = New System.Drawing.Size(275, 26)
+        Me.PHAMASUToolStripMenuItem.Text = "PHAMACEUTICAL SUPPLY"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SURGICALToolStripMenuItem, Me.PHARMACEUTICALToolStripMenuItem, Me.SUPPILERToolStripMenuItem})
+        Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Padding = New System.Windows.Forms.Padding(20, 0, 20, 0)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(155, 34)
+        Me.ToolStripMenuItem1.Text = "REQUISITION"
+        '
+        'SURGICALToolStripMenuItem
+        '
+        Me.SURGICALToolStripMenuItem.Name = "SURGICALToolStripMenuItem"
+        Me.SURGICALToolStripMenuItem.Size = New System.Drawing.Size(223, 26)
+        Me.SURGICALToolStripMenuItem.Text = "SURGICAL"
+        '
+        'PHARMACEUTICALToolStripMenuItem
+        '
+        Me.PHARMACEUTICALToolStripMenuItem.Name = "PHARMACEUTICALToolStripMenuItem"
+        Me.PHARMACEUTICALToolStripMenuItem.Size = New System.Drawing.Size(223, 26)
+        Me.PHARMACEUTICALToolStripMenuItem.Text = "PHARMACEUTICAL"
+        '
+        'SUPPILERToolStripMenuItem
+        '
+        Me.SUPPILERToolStripMenuItem.Name = "SUPPILERToolStripMenuItem"
+        Me.SUPPILERToolStripMenuItem.Size = New System.Drawing.Size(223, 26)
+        Me.SUPPILERToolStripMenuItem.Text = "SUPPILER"
+        '
+        'BILLSToolStripMenuItem
+        '
+        Me.BILLSToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.BILLSToolStripMenuItem.Name = "BILLSToolStripMenuItem"
+        Me.BILLSToolStripMenuItem.Padding = New System.Windows.Forms.Padding(20, 0, 20, 0)
+        Me.BILLSToolStripMenuItem.Size = New System.Drawing.Size(94, 34)
+        Me.BILLSToolStripMenuItem.Text = "BILLS"
+        '
+        'PROFILEToolStripMenuItem
+        '
+        Me.PROFILEToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.PROFILEToolStripMenuItem.Name = "PROFILEToolStripMenuItem"
+        Me.PROFILEToolStripMenuItem.Padding = New System.Windows.Forms.Padding(20, 0, 20, 0)
+        Me.PROFILEToolStripMenuItem.Size = New System.Drawing.Size(116, 34)
+        Me.PROFILEToolStripMenuItem.Text = "PROFILE"
+        '
+        'StaffPanel
+        '
+        Me.StaffPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.StaffPanel.Location = New System.Drawing.Point(0, 99)
+        Me.StaffPanel.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.StaffPanel.Name = "StaffPanel"
+        Me.StaffPanel.Size = New System.Drawing.Size(1073, 602)
+        Me.StaffPanel.TabIndex = 1
+        '
+        'dashboard
+        '
+        Me.dashboard.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dashboard.Name = "dashboard"
+        Me.dashboard.Size = New System.Drawing.Size(66, 34)
+        Me.dashboard.Text = "MAIN"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox1.Image = Global.Wellmeadaws.My.Resources.Resources._387490059_2007052539671796_122566097641315469_n2
+        Me.PictureBox1.Location = New System.Drawing.Point(2, 3)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(196, 59)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'FormMain
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(1073, 701)
+        Me.Controls.Add(Me.StaffPanel)
+        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Name = "FormMain"
+        Me.Text = "Form1"
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+
     End Sub
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
@@ -301,4 +311,5 @@ Partial Class FormMain
     Friend WithEvents supplyList As ToolStripMenuItem
     Friend WithEvents SURGICALSUPPLYToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PHAMASUToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents dashboard As ToolStripMenuItem
 End Class

@@ -1,16 +1,15 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Globalization
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class Staff
 
-    Dim connectionString As String = "Data Source=144.24.38.124\SQLEXPRESS,1433;Initial Catalog=Project ;User Id=admin;Password=adminadminadmin"
+    Dim connectionString As String = "Data Source=124.121.233.223\SQLEXPRESS,1433;Initial Catalog=Project ;User Id=admin;Password=adminadminadmin"
     Dim sqlConnection As New SqlConnection(connectionString)
 
     Private Sub FormData_Load(sender As Object, e As EventArgs)
-
-
         ' สร้าง query
-        Dim query1 As String = "SELECT * FROM Staff"
+        Dim query1 As String = "SELECT StaffID, FirstName, LastName, Address, Tel, DateOfBirth, Sex, NationalInsuranceNumber, Position, CurrentSalary, HoursWorkedPerWeek FROM Staff"
 
         ' สร้าง command
         Dim command1 As New SqlCommand(query1, sqlConnection)
@@ -43,10 +42,10 @@ Public Class Staff
 
             If String.IsNullOrWhiteSpace(searchText) Then
                 ' If the search box is empty, retrieve all patient records
-                selectQuery = "SELECT * FROM Staff"
+                selectQuery = "SELECT StaffID, FirstName, LastName, Address, Tel, DateOfBirth, Sex, NationalInsuranceNumber, Position, CurrentSalary, HoursWorkedPerWeek FROM Staff"
             Else
                 ' If a search term is entered, filter by FirstName, LastName, or Tel
-                selectQuery = "SELECT * FROM Staff WHERE StaffID LIKE @SearchText OR FirstName LIKE @SearchText OR LastName LIKE @SearchText OR Tel LIKE @SearchText"
+                selectQuery = "SELECT StaffID, FirstName, LastName, Address, Tel, DateOfBirth, Sex, NationalInsuranceNumber, Position, CurrentSalary, HoursWorkedPerWeek FROM Staff WHERE StaffID LIKE @SearchText OR FirstName LIKE @SearchText OR LastName LIKE @SearchText OR Tel LIKE @SearchText"
             End If
 
             Using connection As New SqlConnection(connectionString)
@@ -77,7 +76,6 @@ Public Class Staff
         End Try
     End Sub
 
-
     Private Function GetNextID() As String
         ' อย่าลืมเปลี่ยนชื่อ Table นะจ้ะ
         Dim query As String = "SELECT MAX(StaffID) FROM Staff"
@@ -98,16 +96,14 @@ Public Class Staff
         End Using
     End Function
     Private Sub btnADD_Click(sender As Object, e As EventArgs) Handles btnADD.Click
-        Dim oDate As DateTime = Convert.ToDateTime(DateTimeB.Text)
-
 
         Try
 
             Dim nextID As String = GetNextID()
-
             ' สร้างคำสั่ง SQL ด้วยพารามิเตอร์
             'Dim sqlin As String = "INSERT INTO staff VALUES(@staffid, @firstname, @lastname, @sex, @nin, @currentsalary, @address, @position, @telephonenumber, @dateofbirth, @wards_wardid)"
-            Dim sqlin As String = "INSERT INTO staff (StaffID ,FirstName, LastName, Address, Tel, DateOfBirth, Sex, NationalInsuranceNumber, Position, CurrentSalary, HoursWorkedPerWeek) VALUES('" & nextID & "','" & txtBoxFirstname.Text & "', '" & txtBoxLastname.Text & "', '" & txtBoxAddr.Text & "', '" & txtBoxTele.Text & "', '" & oDate & "', '" & ComboBoxSex2.Text & "', '" & txtBoxNIN.Text & "', '" & txtBoxPosit.Text & "', '" & txtBoxSalary.Text & "','" & txtBoxHPWNum.Text & "')"
+            Dim sqlin As String = "INSERT INTO staff (StaffID ,FirstName, LastName, Address, Tel, DateOfBirth, Sex, NationalInsuranceNumber, Position, CurrentSalary, HoursWorkedPerWeek) " &
+                                  "VALUES('" & nextID & "','" & txtBoxFirstname.Text & "', '" & txtBoxLastname.Text & "', '" & txtBoxAddr.Text & "', '" & txtBoxTele.Text & "', '" & DateTimeB.Value.ToString("yyyy-MM-dd HH:mm:ss") & "', '" & ComboBoxSex2.Text & "', '" & txtBoxNIN.Text & "', '" & txtBoxPosit.Text & "', '" & txtBoxSalary.Text & "','" & txtBoxHPWNum.Text & "')"
 
             Dim sqlCmd = sqlConnection.CreateCommand()
             sqlCmd.CommandText = sqlin
@@ -130,12 +126,133 @@ Public Class Staff
             sqlCmd.ExecuteNonQuery()
 
 
-            MessageBox.Show("บันทึกข้อมูลสำเร็จ")
+            MessageBox.Show("Saved successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            FormData_Load(Nothing, Nothing)
         Catch ex As Exception
-            MessageBox.Show("เกิดข้อผิดพลาดในการบันทึกข้อมูล: " & ex.Message)
+            MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         End Try
         sqlConnection.Close()
+    End Sub
+
+    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+        Try
+            ' Check if only one row is selected in the DataGridView
+            If DataGridView1.SelectedRows.Count = 1 Then
+                ' Get the selected row
+                Dim selectedRow As DataGridViewRow = DataGridView1.SelectedRows(0)
+
+                ' Retrieve the unique identifier (e.g., a primary key) from the selected row
+                Dim primaryKeyValue As String = selectedRow.Cells("StaffID").Value.ToString()
+
+                ' Create a SQL UPDATE statement
+                Dim updateQuery As String = "UPDATE Staff SET FirstName = @Column2,
+                                                  LastName = @Column3,
+                                                  Address = @Column4,
+                                                  Tel = @Column5,
+                                                  DateOfBirth = @Column6,
+                                                  Sex = @Column7,
+                                                  NationalInsuranceNumber = @Column8,
+                                                  Position = @Column9,
+                                                  CurrentSalary = @Column10,
+                                                  HoursWorkedPerWeek = @Column12
+                                                  WHERE StaffID = @PrimaryKey"
+
+                Using connection As New SqlConnection(connectionString)
+                    Using command As New SqlCommand(updateQuery, connection)
+                        ' Add parameters for the primary key and TextBox values
+                        command.Parameters.AddWithValue("@PrimaryKey", primaryKeyValue)
+                        command.Parameters.AddWithValue("@Column2", txtBoxFirstname.Text)
+                        command.Parameters.AddWithValue("@Column3", txtBoxLastname.Text)
+                        command.Parameters.AddWithValue("@Column4", txtBoxAddr.Text)
+                        command.Parameters.AddWithValue("@Column5", txtBoxTele.Text)
+                        ' Convert and format DateTimeB.Value to match SQL Server's expected format
+                        command.Parameters.AddWithValue("@Column6", DateTimeB.Value.ToString("yyyy-MM-dd"))
+
+                        command.Parameters.AddWithValue("@Column7", ComboBoxSex2.Text)
+                        command.Parameters.AddWithValue("@Column8", txtBoxNIN.Text)
+                        command.Parameters.AddWithValue("@Column9", txtBoxPosit.Text)
+                        command.Parameters.AddWithValue("@Column10", txtBoxSalary.Text)
+                        command.Parameters.AddWithValue("@Column12", txtBoxHPWNum.Text)
+
+                        ' Add more parameters for other columns as needed
+
+                        connection.Open()
+                        command.ExecuteNonQuery()
+                        connection.Close()
+                    End Using
+                End Using
+                ' Update other columns as needed
+
+                ' Inform the user that changes have been saved
+                MessageBox.Show("Edited successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                FormData_Load(Nothing, Nothing)
+            ElseIf DataGridView1.SelectedRows.Count > 1 Then
+                MessageBox.Show("Please select only one row to edit.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Else
+                MessageBox.Show("Please select a row to edit.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+        Catch ex As Exception
+            ' Handle any exceptions and show an error message
+            MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
+        Try
+            ' Check if any rows are selected in the DataGridView
+            If DataGridView1.SelectedRows.Count > 0 Then
+                ' Ask the user to confirm the deletion
+                Dim result As DialogResult = MessageBox.Show("Do you want to delete the selected row(s)?", "Confirm delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+                If result = DialogResult.Yes Then
+                    ' Create a list to store the selected primary key values
+                    Dim selectedKeys As New List(Of String)
+
+                    ' Collect the selected primary key values
+                    For Each selectedRow As DataGridViewRow In DataGridView1.SelectedRows
+                        Dim primaryKeyValue As String = selectedRow.Cells("StaffID").Value.ToString()
+                        selectedKeys.Add(primaryKeyValue)
+                    Next
+
+                    ' Create a SQL DELETE statement
+                    Dim deleteQuery As String = "DELETE FROM Staff WHERE StaffID = @PrimaryKey"
+
+                    ' Create a SqlConnection and SqlCommand
+                    Using connection As New SqlConnection(connectionString)
+                        Using command As New SqlCommand(deleteQuery, connection)
+                            ' Add a parameter for the primary key value
+                            command.Parameters.Add("@PrimaryKey", SqlDbType.VarChar)
+
+                            connection.Open()
+
+                            ' Iterate through the list of selected primary keys and delete rows
+                            For Each key As String In selectedKeys
+                                command.Parameters("@PrimaryKey").Value = key
+                                command.ExecuteNonQuery()
+
+                                ' Remove the selected row from the DataGridView
+                                Dim selectedRow As DataGridViewRow = DataGridView1.Rows.Cast(Of DataGridViewRow)().Where(Function(r) r.Cells("StaffID").Value.ToString() = key).FirstOrDefault()
+                                If selectedRow IsNot Nothing Then
+                                    DataGridView1.Rows.Remove(selectedRow)
+                                End If
+                            Next
+
+                            connection.Close()
+                        End Using
+                    End Using
+
+                    MessageBox.Show("Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    FormData_Load(Nothing, Nothing)
+                End If
+            Else
+                MessageBox.Show("Please select rows to delete.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+
+        Catch ex As Exception
+            ' Handle any exceptions and show an error message
+            MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
@@ -146,94 +263,29 @@ Public Class Staff
             Dim cell1Value As String = selectedRow.Cells(0).Value.ToString() ' Assuming column index 0
             Dim cell2Value As String = selectedRow.Cells(1).Value.ToString() ' Assuming column index 1
             Dim cell3Value As String = selectedRow.Cells(2).Value.ToString() ' Assuming column index 2
+            Dim cell4Value As String = selectedRow.Cells(6).Value.ToString()
+            Dim cell5Value As String = selectedRow.Cells(3).Value.ToString()
+            Dim cell6Value As String = selectedRow.Cells(4).Value.ToString()
+            Dim cell7Value As String = selectedRow.Cells(5).Value.ToString()
+            Dim cell8Value As String = selectedRow.Cells(7).Value.ToString()
+            Dim cell9Value As String = selectedRow.Cells(8).Value.ToString()
+            Dim cell10Value As String = selectedRow.Cells(9).Value.ToString()
+            Dim cell11Value As String = selectedRow.Cells(10).Value.ToString()
+
 
             ' Populate data into text boxes
             txtBoxFirstname.Text = cell2Value
             txtBoxLastname.Text = cell3Value
+            ComboBoxSex2.Text = cell4Value
+            txtBoxAddr.Text = cell5Value
+            txtBoxTele.Text = cell6Value
+            DateTimeB.Text = cell7Value
+            txtBoxNIN.Text = cell8Value
+            txtBoxPosit.Text = cell9Value
+            txtBoxSalary.Text = cell10Value
+            txtBoxHPWNum.Text = cell11Value
+
         End If
-    End Sub
-
-    Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
-        Try
-            ' Check if any rows are selected in the DataGridView
-            If DataGridView1.SelectedRows.Count > 0 Then
-                ' Get the selected row
-                Dim selectedRow As DataGridViewRow = DataGridView1.SelectedRows(0)
-
-                ' Retrieve the unique identifier (e.g., a primary key) from the selected row
-                Dim primaryKeyValue As String = selectedRow.Cells("StaffID").Value.ToString()
-
-                ' Create a SQL DELETE statement
-                Dim deleteQuery As String = "DELETE FROM Staff WHERE StaffID = @PrimaryKey"
-
-                ' Create a SqlConnection and SqlCommand
-                Using connection As New SqlConnection(connectionString)
-                    Using command As New SqlCommand(deleteQuery, connection)
-                        ' Add a parameter for the primary key value
-                        command.Parameters.AddWithValue("@PrimaryKey", primaryKeyValue)
-
-                        ' Open the database connection
-                        connection.Open()
-
-                        ' Execute the DELETE query
-                        command.ExecuteNonQuery()
-
-                        ' Close the database connection
-                        connection.Close()
-                    End Using
-                End Using
-
-                ' Remove the selected row from the DataGridView
-                DataGridView1.Rows.Remove(selectedRow)
-            End If
-        Catch ex As Exception
-            ' Handle any exceptions and show an error message
-            MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
-    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
-        Try
-            ' Check if a row is selected in the DataGridView
-            If DataGridView1.SelectedRows.Count > 0 Then
-                ' Get the selected row
-                Dim selectedRow As DataGridViewRow = DataGridView1.SelectedRows(0)
-
-                ' Retrieve the unique identifier (e.g., a primary key) from the selected row
-                Dim primaryKeyValue As String = selectedRow.Cells("StaffID").Value.ToString()
-
-                ' Create a SQL UPDATE statement
-                Dim updateQuery As String = "UPDATE Staff SET StaffID = @Column1, FirstName = @Column2, LastName = @Column3 WHERE StaffID = @PrimaryKey"
-
-                Using connection As New SqlConnection(connectionString)
-                    Using command As New SqlCommand(updateQuery, connection)
-                        ' Add parameters for the primary key and TextBox values
-                        command.Parameters.AddWithValue("@PrimaryKey", primaryKeyValue)
-                        command.Parameters.AddWithValue("@Column2", txtBoxFirstname.Text)
-                        command.Parameters.AddWithValue("@Column3", txtBoxLastname.Text)
-                        ' Add more parameters for other columns as needed
-
-                        connection.Open()
-                        command.ExecuteNonQuery()
-                        connection.Close()
-                    End Using
-                End Using
-
-                ' Update the selected row in the DataGridView with edited data
-                selectedRow.Cells("FirstName").Value = txtBoxFirstname.Text
-                selectedRow.Cells("LastName").Value = txtBoxLastname.Text
-                ' Update other columns as needed
-
-                ' Inform the user that changes have been saved
-                MessageBox.Show("Changes saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Else
-                ' Inform the user that no row is selected
-                MessageBox.Show("Please select a row to edit.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            End If
-        Catch ex As Exception
-            ' Handle any exceptions and show an error message
-            MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
     End Sub
 
     Private Sub Staff_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -241,7 +293,7 @@ Public Class Staff
 
 
         ' สร้าง query
-        Dim query1 As String = "SELECT * FROM Staff"
+        Dim query1 As String = "SELECT StaffID, FirstName, LastName, Address, Tel, DateOfBirth, Sex, NationalInsuranceNumber, Position, CurrentSalary, HoursWorkedPerWeek FROM Staff"
 
         ' สร้าง command
         Dim command1 As New SqlCommand(query1, sqlConnection)
@@ -270,6 +322,12 @@ Public Class Staff
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim newForm As New WorkExperience() ' สร้างตัวแปรสำหรับฟอร์มใหม่
+        newForm.StartPosition = FormStartPosition.CenterScreen
+        newForm.Show() ' แสดงฟอร์มใหม่
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim newForm As New Acc() ' สร้างตัวแปรสำหรับฟอร์มใหม่
         newForm.StartPosition = FormStartPosition.CenterScreen
         newForm.Show() ' แสดงฟอร์มใหม่
     End Sub

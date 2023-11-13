@@ -22,277 +22,259 @@ Partial Class FormWard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(FormWard))
-        txtboxwardid = New TextBox()
-        Label4 = New Label()
-        txtboxsearch = New TextBox()
-        txtboxtotalbeds = New TextBox()
-        txttelext = New TextBox()
-        Label9 = New Label()
-        txtboxlocation = New TextBox()
-        Label6 = New Label()
-        Label3 = New Label()
-        txtboxwardname = New TextBox()
-        Label2 = New Label()
-        Label1 = New Label()
-        DataGridView1 = New DataGridView()
-        btnedit = New Button()
-        btndelete = New Button()
-        btnadd = New Button()
-        btnsearch = New PictureBox()
-        txtboxwardnum = New TextBox()
-        Label5 = New Label()
-        Panel1 = New Panel()
-        Button2 = New Button()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
-        CType(btnsearch, ComponentModel.ISupportInitialize).BeginInit()
-        Panel1.SuspendLayout()
-        SuspendLayout()
-        ' 
-        ' txtboxwardid
-        ' 
-        txtboxwardid.BorderStyle = BorderStyle.FixedSingle
-        txtboxwardid.Location = New Point(170, 348)
-        txtboxwardid.Margin = New Padding(3, 4, 3, 4)
-        txtboxwardid.Multiline = True
-        txtboxwardid.Name = "txtboxwardid"
-        txtboxwardid.Size = New Size(114, 30)
-        txtboxwardid.TabIndex = 57
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Location = New Point(97, 351)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(74, 20)
-        Label4.TabIndex = 56
-        Label4.Text = "WARD ID:"
-        ' 
-        ' txtboxsearch
-        ' 
-        txtboxsearch.BorderStyle = BorderStyle.FixedSingle
-        txtboxsearch.Location = New Point(954, 392)
-        txtboxsearch.Margin = New Padding(3, 4, 3, 4)
-        txtboxsearch.Name = "txtboxsearch"
-        txtboxsearch.Size = New Size(148, 27)
-        txtboxsearch.TabIndex = 54
-        ' 
-        ' txtboxtotalbeds
-        ' 
-        txtboxtotalbeds.BorderStyle = BorderStyle.FixedSingle
-        txtboxtotalbeds.Location = New Point(514, 141)
-        txtboxtotalbeds.Margin = New Padding(3, 4, 3, 4)
-        txtboxtotalbeds.Name = "txtboxtotalbeds"
-        txtboxtotalbeds.Size = New Size(164, 27)
-        txtboxtotalbeds.TabIndex = 46
-        ' 
-        ' txttelext
-        ' 
-        txttelext.BorderStyle = BorderStyle.FixedSingle
-        txttelext.Location = New Point(160, 140)
-        txttelext.Margin = New Padding(3, 4, 3, 4)
-        txttelext.Name = "txttelext"
-        txttelext.Size = New Size(146, 27)
-        txttelext.TabIndex = 44
-        ' 
-        ' Label9
-        ' 
-        Label9.AutoSize = True
-        Label9.Location = New Point(423, 148)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(85, 20)
-        Label9.TabIndex = 42
-        Label9.Text = "Total Beds :"
-        ' 
-        ' txtboxlocation
-        ' 
-        txtboxlocation.BorderStyle = BorderStyle.FixedSingle
-        txtboxlocation.Location = New Point(855, 59)
-        txtboxlocation.Margin = New Padding(3, 4, 3, 4)
-        txtboxlocation.Name = "txtboxlocation"
-        txtboxlocation.Size = New Size(163, 27)
-        txtboxlocation.TabIndex = 41
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Location = New Point(762, 63)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(73, 20)
-        Label6.TabIndex = 39
-        Label6.Text = "Location :"
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Location = New Point(53, 147)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(101, 20)
-        Label3.TabIndex = 38
-        Label3.Text = "Tel Extention :"
-        ' 
-        ' txtboxwardname
-        ' 
-        txtboxwardname.BorderStyle = BorderStyle.FixedSingle
-        txtboxwardname.Location = New Point(514, 59)
-        txtboxwardname.Margin = New Padding(3, 4, 3, 4)
-        txtboxwardname.Name = "txtboxwardname"
-        txtboxwardname.Size = New Size(164, 27)
-        txtboxwardname.TabIndex = 37
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(414, 63)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(95, 20)
-        Label2.TabIndex = 36
-        Label2.Text = "Ward Name :"
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.Location = New Point(549, 23)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(88, 32)
-        Label1.TabIndex = 35
-        Label1.Text = "WARD"
-        ' 
-        ' DataGridView1
-        ' 
-        DataGridView1.BorderStyle = BorderStyle.Fixed3D
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(99, 443)
-        DataGridView1.Margin = New Padding(3, 4, 3, 4)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.RowHeadersWidth = 51
-        DataGridView1.RowTemplate.Height = 25
-        DataGridView1.Size = New Size(1070, 347)
-        DataGridView1.TabIndex = 60
-        ' 
-        ' btnedit
-        ' 
-        btnedit.BackColor = Color.FromArgb(CByte(241), CByte(227), CByte(86))
-        btnedit.Location = New Point(614, 384)
-        btnedit.Margin = New Padding(3, 4, 3, 4)
-        btnedit.Name = "btnedit"
-        btnedit.Size = New Size(86, 31)
-        btnedit.TabIndex = 63
-        btnedit.Text = "EDIT"
-        btnedit.UseVisualStyleBackColor = False
-        ' 
-        ' btndelete
-        ' 
-        btndelete.BackColor = Color.FromArgb(CByte(252), CByte(136), CByte(136))
-        btndelete.Location = New Point(721, 384)
-        btndelete.Margin = New Padding(3, 4, 3, 4)
-        btndelete.Name = "btndelete"
-        btndelete.Size = New Size(86, 31)
-        btndelete.TabIndex = 62
-        btndelete.Text = "DELETE"
-        btndelete.UseVisualStyleBackColor = False
-        ' 
-        ' btnadd
-        ' 
-        btnadd.BackColor = Color.FromArgb(CByte(179), CByte(255), CByte(143))
-        btnadd.Location = New Point(507, 384)
-        btnadd.Margin = New Padding(3, 4, 3, 4)
-        btnadd.Name = "btnadd"
-        btnadd.Size = New Size(86, 31)
-        btnadd.TabIndex = 61
-        btnadd.Text = "ADD"
-        btnadd.UseVisualStyleBackColor = False
-        ' 
-        ' btnsearch
-        ' 
-        btnsearch.Image = CType(resources.GetObject("btnsearch.Image"), Image)
-        btnsearch.Location = New Point(1110, 392)
-        btnsearch.Margin = New Padding(3, 4, 3, 4)
-        btnsearch.Name = "btnsearch"
-        btnsearch.Size = New Size(61, 31)
-        btnsearch.SizeMode = PictureBoxSizeMode.Zoom
-        btnsearch.TabIndex = 64
-        btnsearch.TabStop = False
-        ' 
-        ' txtboxwardnum
-        ' 
-        txtboxwardnum.BorderStyle = BorderStyle.FixedSingle
-        txtboxwardnum.Location = New Point(160, 59)
-        txtboxwardnum.Margin = New Padding(3, 4, 3, 4)
-        txtboxwardnum.Name = "txtboxwardnum"
-        txtboxwardnum.Size = New Size(146, 27)
-        txtboxwardnum.TabIndex = 66
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Location = New Point(54, 61)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(105, 20)
-        Label5.TabIndex = 65
-        Label5.Text = "Ward Number:"
-        ' 
-        ' Panel1
-        ' 
-        Panel1.BorderStyle = BorderStyle.FixedSingle
-        Panel1.Controls.Add(txtboxwardnum)
-        Panel1.Controls.Add(Label3)
-        Panel1.Controls.Add(Label5)
-        Panel1.Controls.Add(txttelext)
-        Panel1.Controls.Add(txtboxwardname)
-        Panel1.Controls.Add(Label2)
-        Panel1.Controls.Add(Label9)
-        Panel1.Controls.Add(txtboxtotalbeds)
-        Panel1.Controls.Add(txtboxlocation)
-        Panel1.Controls.Add(Label6)
-        Panel1.Location = New Point(99, 91)
-        Panel1.Margin = New Padding(3, 4, 3, 4)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1069, 227)
-        Panel1.TabIndex = 68
-        ' 
-        ' Button2
-        ' 
-        Button2.BackColor = Color.CornflowerBlue
-        Button2.Location = New Point(99, 404)
-        Button2.Margin = New Padding(3, 4, 3, 4)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(158, 31)
-        Button2.TabIndex = 72
-        Button2.Text = "SUPPLIES IN WARDS"
-        Button2.UseVisualStyleBackColor = False
-        ' 
-        ' FormWard
-        ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
-        BackColor = SystemColors.ControlLightLight
-        ClientSize = New Size(1285, 819)
-        Controls.Add(Button2)
-        Controls.Add(Panel1)
-        Controls.Add(txtboxsearch)
-        Controls.Add(btnsearch)
-        Controls.Add(btnedit)
-        Controls.Add(btndelete)
-        Controls.Add(btnadd)
-        Controls.Add(DataGridView1)
-        Controls.Add(txtboxwardid)
-        Controls.Add(Label4)
-        Controls.Add(Label1)
-        FormBorderStyle = FormBorderStyle.None
-        Margin = New Padding(3, 4, 3, 4)
-        Name = "FormWard"
-        Text = "FormWard"
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
-        CType(btnsearch, ComponentModel.ISupportInitialize).EndInit()
-        Panel1.ResumeLayout(False)
-        Panel1.PerformLayout()
-        ResumeLayout(False)
-        PerformLayout()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormWard))
+        Me.txtboxsearch = New System.Windows.Forms.TextBox()
+        Me.txtboxtotalbeds = New System.Windows.Forms.TextBox()
+        Me.txttelext = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtboxlocation = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtboxwardname = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.btnedit = New System.Windows.Forms.Button()
+        Me.btndelete = New System.Windows.Forms.Button()
+        Me.btnadd = New System.Windows.Forms.Button()
+        Me.btnsearch = New System.Windows.Forms.PictureBox()
+        Me.txtboxwardnum = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnsearch, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'txtboxsearch
+        '
+        Me.txtboxsearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtboxsearch.Location = New System.Drawing.Point(873, 250)
+        Me.txtboxsearch.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.txtboxsearch.Name = "txtboxsearch"
+        Me.txtboxsearch.Size = New System.Drawing.Size(112, 20)
+        Me.txtboxsearch.TabIndex = 54
+        '
+        'txtboxtotalbeds
+        '
+        Me.txtboxtotalbeds.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtboxtotalbeds.Location = New System.Drawing.Point(466, 89)
+        Me.txtboxtotalbeds.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.txtboxtotalbeds.Name = "txtboxtotalbeds"
+        Me.txtboxtotalbeds.Size = New System.Drawing.Size(124, 20)
+        Me.txtboxtotalbeds.TabIndex = 46
+        '
+        'txttelext
+        '
+        Me.txttelext.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txttelext.Location = New System.Drawing.Point(168, 88)
+        Me.txttelext.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.txttelext.Name = "txttelext"
+        Me.txttelext.Size = New System.Drawing.Size(110, 20)
+        Me.txttelext.TabIndex = 44
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(397, 93)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(64, 13)
+        Me.Label9.TabIndex = 42
+        Me.Label9.Text = "Total Beds :"
+        '
+        'txtboxlocation
+        '
+        Me.txtboxlocation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtboxlocation.Location = New System.Drawing.Point(787, 34)
+        Me.txtboxlocation.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.txtboxlocation.Name = "txtboxlocation"
+        Me.txtboxlocation.Size = New System.Drawing.Size(123, 20)
+        Me.txtboxlocation.TabIndex = 41
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(718, 37)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(54, 13)
+        Me.Label6.TabIndex = 39
+        Me.Label6.Text = "Location :"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(88, 93)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(75, 13)
+        Me.Label3.TabIndex = 38
+        Me.Label3.Text = "Tel Extention :"
+        '
+        'txtboxwardname
+        '
+        Me.txtboxwardname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtboxwardname.Location = New System.Drawing.Point(466, 35)
+        Me.txtboxwardname.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.txtboxwardname.Name = "txtboxwardname"
+        Me.txtboxwardname.Size = New System.Drawing.Size(124, 20)
+        Me.txtboxwardname.TabIndex = 37
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(390, 38)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(70, 13)
+        Me.Label2.TabIndex = 36
+        Me.Label2.Text = "Ward Name :"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(536, 9)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(69, 25)
+        Me.Label1.TabIndex = 35
+        Me.Label1.Text = "WARD"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(74, 288)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 25
+        Me.DataGridView1.Size = New System.Drawing.Size(956, 226)
+        Me.DataGridView1.TabIndex = 60
+        '
+        'btnedit
+        '
+        Me.btnedit.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(86, Byte), Integer))
+        Me.btnedit.Location = New System.Drawing.Point(548, 248)
+        Me.btnedit.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.btnedit.Name = "btnedit"
+        Me.btnedit.Size = New System.Drawing.Size(64, 20)
+        Me.btnedit.TabIndex = 63
+        Me.btnedit.Text = "EDIT"
+        Me.btnedit.UseVisualStyleBackColor = False
+        '
+        'btndelete
+        '
+        Me.btndelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer))
+        Me.btndelete.Location = New System.Drawing.Point(629, 248)
+        Me.btndelete.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.btndelete.Name = "btndelete"
+        Me.btndelete.Size = New System.Drawing.Size(64, 20)
+        Me.btndelete.TabIndex = 62
+        Me.btndelete.Text = "DELETE"
+        Me.btndelete.UseVisualStyleBackColor = False
+        '
+        'btnadd
+        '
+        Me.btnadd.BackColor = System.Drawing.Color.FromArgb(CType(CType(179, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.btnadd.Location = New System.Drawing.Point(468, 248)
+        Me.btnadd.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.btnadd.Name = "btnadd"
+        Me.btnadd.Size = New System.Drawing.Size(64, 20)
+        Me.btnadd.TabIndex = 61
+        Me.btnadd.Text = "ADD"
+        Me.btnadd.UseVisualStyleBackColor = False
+        '
+        'btnsearch
+        '
+        Me.btnsearch.Image = CType(resources.GetObject("btnsearch.Image"), System.Drawing.Image)
+        Me.btnsearch.Location = New System.Drawing.Point(989, 250)
+        Me.btnsearch.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.btnsearch.Name = "btnsearch"
+        Me.btnsearch.Size = New System.Drawing.Size(46, 20)
+        Me.btnsearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnsearch.TabIndex = 64
+        Me.btnsearch.TabStop = False
+        '
+        'txtboxwardnum
+        '
+        Me.txtboxwardnum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtboxwardnum.Location = New System.Drawing.Point(168, 35)
+        Me.txtboxwardnum.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.txtboxwardnum.Name = "txtboxwardnum"
+        Me.txtboxwardnum.Size = New System.Drawing.Size(110, 20)
+        Me.txtboxwardnum.TabIndex = 66
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(88, 37)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(76, 13)
+        Me.Label5.TabIndex = 65
+        Me.Label5.Text = "Ward Number:"
+        '
+        'Panel1
+        '
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.txtboxwardnum)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.txttelext)
+        Me.Panel1.Controls.Add(Me.txtboxwardname)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.txtboxtotalbeds)
+        Me.Panel1.Controls.Add(Me.txtboxlocation)
+        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Location = New System.Drawing.Point(74, 59)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(956, 148)
+        Me.Panel1.TabIndex = 68
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.Button2.Location = New System.Drawing.Point(74, 263)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(118, 20)
+        Me.Button2.TabIndex = 72
+        Me.Button2.Text = "SUPPLIES IN WARDS"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'FormWard
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.ClientSize = New System.Drawing.Size(1073, 602)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.txtboxsearch)
+        Me.Controls.Add(Me.btnsearch)
+        Me.Controls.Add(Me.btnedit)
+        Me.Controls.Add(Me.btndelete)
+        Me.Controls.Add(Me.btnadd)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Name = "FormWard"
+        Me.Text = "FormWard"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnsearch, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
-    Friend WithEvents txtboxwardid As TextBox
-    Friend WithEvents Label4 As Label
     Friend WithEvents txtboxsearch As TextBox
     Friend WithEvents txtboxtotalbeds As TextBox
     Friend WithEvents txttelext As TextBox

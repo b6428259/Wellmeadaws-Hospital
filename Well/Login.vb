@@ -1,4 +1,6 @@
 ﻿Public Class Login
+
+    Dim WithEvents backgroundWorker As New System.ComponentModel.BackgroundWorker()
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Set placeholder text for Tboxuser
         Tboxuser.Text = "Enter your Username"
@@ -19,6 +21,9 @@
         Tboxpass.Padding = New Padding(20, Tboxpass.Padding.Top, Tboxpass.Padding.Right, Tboxpass.Padding.Bottom)
 
         Tboxuser.Focus()
+
+
+
     End Sub
 
     Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles Loginbtn.Click

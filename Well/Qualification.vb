@@ -2,7 +2,7 @@
 
 Public Class Qualification
 
-    Dim connectionString As String = "Data Source=144.24.38.124\SQLEXPRESS,1433;Initial Catalog=Project ;User Id=admin;Password=adminadminadmin"
+    Dim connectionString As String = "Data Source=124.121.233.223\SQLEXPRESS,1433;Initial Catalog=Project ;User Id=admin;Password=adminadminadmin"
     Dim sqlConnection As New SqlConnection(connectionString)
     Private Sub Qualification_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -27,6 +27,7 @@ Public Class Qualification
         ' ปิดการเชื่อมต่อ
         sqlConnection.Close()
 
+        quaID.ReadOnly = True
     End Sub
 
     Private Sub btnsearchmed_Click(sender As Object, e As EventArgs) Handles btnsearchmed.Click
@@ -94,10 +95,7 @@ Public Class Qualification
     End Function
 
     Private Sub ButtonAdd_Click(sender As Object, e As EventArgs) Handles ButtonAdd.Click
-
-
-        Dim oDate As DateTime = Convert.ToDateTime(qualiDate.Text)
-
+        'Dim oDate As DateTime = Convert.ToDateTime(qualiDate.Text)
 
         Try
             ' Get the next available patient ID
@@ -105,7 +103,7 @@ Public Class Qualification
 
             ' Create a SQL INSERT statement with the formatted patient ID
             Dim sqlin As String = "INSERT INTO Qualification (QualificationID, StaffID, QualificationDate, QualificationType, InstitutionName) " &
-                                  "VALUES('" & nextID & "','" & staffid.Text & "', '" & oDate & "', '" & qualitype.Text & "', '" & institution.Text & "')"
+                                  "VALUES('" & nextID & "','" & staffid.Text & "', '" & qualiDate.Value.ToString("yyyy-MM-dd HH:mm:ss") & "', '" & qualitype.Text & "', '" & institution.Text & "')"
 
             Dim sqlCmd = sqlConnection.CreateCommand()
             sqlCmd.CommandText = sqlin
@@ -113,11 +111,68 @@ Public Class Qualification
             sqlConnection.Open()
             sqlCmd.ExecuteNonQuery()
 
-            MessageBox.Show("บันทึกข้อมูลสำเร็จ")
+            MessageBox.Show("Saved successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Qualification_Load(Nothing, Nothing)
         Catch ex As Exception
-            MessageBox.Show("เกิดข้อผิดพลาดในการบันทึกข้อมูล: " & ex.Message & oDate)
+            MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             sqlConnection.Close()
+        End Try
+    End Sub
+
+    Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
+        Try
+            ' Check if a row is selected in the DataGridView
+            If DataGridView1.SelectedRows.Count > 0 Then
+                ' Check if only one row is selected
+                If DataGridView1.SelectedRows.Count = 1 Then
+                    ' Get the selected row
+                    Dim selectedRow As DataGridViewRow = DataGridView1.SelectedRows(0)
+
+                    ' Retrieve the unique identifier (e.g., a primary key) from the selected row
+                    Dim primaryKeyValue As String = selectedRow.Cells("QualificationID").Value.ToString()
+
+                    ' Create a SQL UPDATE statement
+                    Dim updateQuery As String = "UPDATE Qualification SET StaffID = @StaffID, QualificationDate = @QualificationDate," &
+                                                "QualificationType = @QualificationType, InstitutionName = @InstitutionName " &
+                                                "WHERE QualificationID = @PrimaryKey"
+
+                    Using connection As New SqlConnection(connectionString)
+                        Using command As New SqlCommand(updateQuery, connection)
+                            ' Add parameters for the primary key and TextBox values
+                            command.Parameters.AddWithValue("@PrimaryKey", primaryKeyValue)
+                            command.Parameters.AddWithValue("@StaffID", staffid.Text)
+                            command.Parameters.AddWithValue("@QualificationDate", qualiDate.Value)
+                            command.Parameters.AddWithValue("@QualificationType", qualitype.Text)
+                            command.Parameters.AddWithValue("@InstitutionName", institution.Text)
+
+                            ' Open the database connection
+                            connection.Open()
+
+                            ' Execute the UPDATE query
+                            command.ExecuteNonQuery()
+
+                            ' Close the database connection
+                            connection.Close()
+                        End Using
+                    End Using
+
+                    ' Inform the user that changes have been saved
+                    MessageBox.Show("Edited successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                    ' Reload the data to reflect the changes
+                    Qualification_Load(Nothing, Nothing)
+                Else
+                    ' Inform the user to select only one row for editing
+                    MessageBox.Show("Please select only one row to edit.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
+            Else
+                ' Inform the user that no row is selected
+                MessageBox.Show("Please select a row to edit.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+        Catch ex As Exception
+            ' Handle any exceptions and show an error message
+            MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -125,35 +180,46 @@ Public Class Qualification
         Try
             ' Check if any rows are selected in the DataGridView
             If DataGridView1.SelectedRows.Count > 0 Then
-                ' Get the selected row
-                Dim selectedRow As DataGridViewRow = DataGridView1.SelectedRows(0)
+                ' Ask the user to confirm the deletion
+                Dim result As DialogResult = MessageBox.Show("Do you want to delete the selected row(s)?", "Confirm delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
-                ' Retrieve the unique identifier (e.g., a primary key) from the selected row
-                Dim primaryKeyValue As String = selectedRow.Cells("QualificationID").Value.ToString()
+                If result = DialogResult.Yes Then
+                    ' Iterate through all selected rows and delete them
+                    For Each selectedRow As DataGridViewRow In DataGridView1.SelectedRows
+                        ' Retrieve the unique identifier (e.g., a primary key) from the selected row
+                        Dim primaryKeyValue As String = selectedRow.Cells("QualificationID").Value.ToString()
 
-                ' Create a SQL DELETE statement
-                Dim deleteQuery As String = "DELETE FROM Qualification WHERE QualificationID = @PrimaryKey"
+                        ' Create a SQL DELETE statement
+                        Dim deleteQuery As String = "DELETE FROM Qualification WHERE QualificationID = @PrimaryKey"
 
-                ' Create a SqlConnection and SqlCommand
-                Using connection As New SqlConnection(connectionString)
-                    Using command As New SqlCommand(deleteQuery, connection)
-                        ' Add a parameter for the primary key value
-                        command.Parameters.AddWithValue("@PrimaryKey", primaryKeyValue)
+                        ' Create a SqlConnection and SqlCommand
+                        Using connection As New SqlConnection(connectionString)
+                            Using command As New SqlCommand(deleteQuery, connection)
+                                ' Add a parameter for the primary key value
+                                command.Parameters.AddWithValue("@PrimaryKey", primaryKeyValue)
 
-                        ' Open the database connection
-                        connection.Open()
+                                ' Open the database connection
+                                connection.Open()
 
-                        ' Execute the DELETE query
-                        command.ExecuteNonQuery()
+                                ' Execute the DELETE query
+                                command.ExecuteNonQuery()
 
-                        ' Close the database connection
-                        connection.Close()
-                    End Using
-                End Using
+                                ' Close the database connection
+                                connection.Close()
+                            End Using
+                        End Using
 
-                ' Remove the selected row from the DataGridView
-                DataGridView1.Rows.Remove(selectedRow)
+                        ' Remove the selected row from the DataGridView
+                        DataGridView1.Rows.Remove(selectedRow)
+                    Next
+
+                    MessageBox.Show("Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Qualification_Load(Nothing, Nothing)
+                End If
+            Else
+                MessageBox.Show("Please select rows to delete.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
+
         Catch ex As Exception
             ' Handle any exceptions and show an error message
             MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -162,7 +228,6 @@ Public Class Qualification
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
 
-        Dim oDate As DateTime = Convert.ToDateTime(qualiDate.Text)
         ' Check if the clicked cell is not a header cell and a row is selected
         If e.RowIndex >= 0 AndAlso DataGridView1.SelectedRows.Count > 0 Then
             ' Get data from the selected row
@@ -184,56 +249,10 @@ Public Class Qualification
         End If
     End Sub
 
-    Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
-        Try
-            ' Check if any rows are selected in the DataGridView
-            If DataGridView1.SelectedRows.Count > 0 Then
-                ' Get the selected row
-                Dim selectedRow As DataGridViewRow = DataGridView1.SelectedRows(0)
-
-                ' Retrieve the unique identifier (e.g., a primary key) from the selected row
-                Dim primaryKeyValue As String = selectedRow.Cells("QualificationID").Value.ToString()
-
-                ' Create a SQL UPDATE statement to modify the selected record
-                Dim updateQuery As String = "UPDATE Qualification " &
-                                            "SET StaffID = @StaffID, QualificationDate = @QualificationDate, " &
-                                            "QualificationType = @QualificationType, InstitutionName = @InstitutionName " &
-                                            "WHERE QualificationID = @PrimaryKey"
-
-                ' Create a SqlConnection and SqlCommand
-                Using connection As New SqlConnection(connectionString)
-                    Using command As New SqlCommand(updateQuery, connection)
-                        ' Add parameters for the fields to be updated
-                        command.Parameters.AddWithValue("@StaffID", staffid.Text)
-                        command.Parameters.AddWithValue("@QualificationDate", qualiDate.Value)
-                        command.Parameters.AddWithValue("@QualificationType", qualitype.Text)
-                        command.Parameters.AddWithValue("@InstitutionName", institution.Text)
-                        ' Add a parameter for the primary key value
-                        command.Parameters.AddWithValue("@PrimaryKey", primaryKeyValue)
-
-                        ' Open the database connection
-                        connection.Open()
-
-                        ' Execute the UPDATE query
-                        command.ExecuteNonQuery()
-
-                        ' Close the database connection
-                        connection.Close()
-                    End Using
-                End Using
-
-                ' Update the DataGridView with the edited data
-                selectedRow.Cells("StaffID").Value = staffid.Text
-                selectedRow.Cells("QualificationDate").Value = qualiDate.Value
-                selectedRow.Cells("QualificationType").Value = qualitype.Text
-                selectedRow.Cells("InstitutionName").Value = institution.Text
-
-                MessageBox.Show("บันทึกข้อมูลสำเร็จ")
-            End If
-        Catch ex As Exception
-            ' Handle any exceptions and show an error message
-            MessageBox.Show("เกิดข้อผิดพลาดในการแก้ไขข้อมูล: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Dim newFormSChoStaff As ChooseStaffName ' สร้างตัวแปรสำหรับฟอร์มใหม่
+        newFormSChoStaff = New ChooseStaffName()
+        newFormSChoStaff.ShowDialog()
+        staffid.Text = newFormSChoStaff.txtStaffID
     End Sub
-
 End Class

@@ -22,334 +22,342 @@ Partial Class Patient
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Patient))
-        LabelPatients = New Label()
-        txtboxName = New TextBox()
-        LabelName = New Label()
-        LabelAddress = New Label()
-        LabelLastname = New Label()
-        LabelStatus = New Label()
-        LabelDateofbirth = New Label()
-        LabelTel = New Label()
-        Label7 = New Label()
-        LabelRegdate = New Label()
-        txtboxAddress = New TextBox()
-        txtboxLastname = New TextBox()
-        TextBoxMarittal = New TextBox()
-        TxtBoxTel = New TextBox()
-        TxtBoxSex = New TextBox()
-        butAdd = New Button()
-        butEdit = New Button()
-        ButDelete = New Button()
-        DataGridView1 = New DataGridView()
-        TextBoxDoB = New TextBox()
-        txtBoxSearch = New TextBox()
-        Panel1 = New Panel()
-        TxtBoxRegisDate = New DateTimePicker()
-        btnsearchpatient = New PictureBox()
-        Button1 = New Button()
-        Button2 = New Button()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
-        Panel1.SuspendLayout()
-        CType(btnsearchpatient, ComponentModel.ISupportInitialize).BeginInit()
-        SuspendLayout()
-        ' 
-        ' LabelPatients
-        ' 
-        LabelPatients.AutoSize = True
-        LabelPatients.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
-        LabelPatients.ForeColor = SystemColors.WindowText
-        LabelPatients.Location = New Point(561, 12)
-        LabelPatients.Name = "LabelPatients"
-        LabelPatients.Size = New Size(140, 37)
-        LabelPatients.TabIndex = 0
-        LabelPatients.Text = "PATIENTS"
-        ' 
-        ' txtboxName
-        ' 
-        txtboxName.BorderStyle = BorderStyle.FixedSingle
-        txtboxName.Location = New Point(98, 37)
-        txtboxName.Margin = New Padding(3, 4, 3, 4)
-        txtboxName.Name = "txtboxName"
-        txtboxName.Size = New Size(151, 27)
-        txtboxName.TabIndex = 2
-        ' 
-        ' LabelName
-        ' 
-        LabelName.AutoSize = True
-        LabelName.Location = New Point(29, 41)
-        LabelName.Name = "LabelName"
-        LabelName.Size = New Size(56, 20)
-        LabelName.TabIndex = 3
-        LabelName.Text = "Name :"
-        ' 
-        ' LabelAddress
-        ' 
-        LabelAddress.AutoSize = True
-        LabelAddress.Location = New Point(29, 108)
-        LabelAddress.Name = "LabelAddress"
-        LabelAddress.Size = New Size(69, 20)
-        LabelAddress.TabIndex = 4
-        LabelAddress.Text = "Address :"
-        ' 
-        ' LabelLastname
-        ' 
-        LabelLastname.AutoSize = True
-        LabelLastname.Location = New Point(358, 45)
-        LabelLastname.Name = "LabelLastname"
-        LabelLastname.Size = New Size(79, 20)
-        LabelLastname.TabIndex = 5
-        LabelLastname.Text = "Lastname :"
-        ' 
-        ' LabelStatus
-        ' 
-        LabelStatus.AutoSize = True
-        LabelStatus.Location = New Point(329, 109)
-        LabelStatus.Name = "LabelStatus"
-        LabelStatus.Size = New Size(107, 20)
-        LabelStatus.TabIndex = 6
-        LabelStatus.Text = "Marital Status :"
-        ' 
-        ' LabelDateofbirth
-        ' 
-        LabelDateofbirth.AutoSize = True
-        LabelDateofbirth.Location = New Point(606, 45)
-        LabelDateofbirth.Name = "LabelDateofbirth"
-        LabelDateofbirth.Size = New Size(101, 20)
-        LabelDateofbirth.TabIndex = 7
-        LabelDateofbirth.Text = "Date of Birth :"
-        ' 
-        ' LabelTel
-        ' 
-        LabelTel.AutoSize = True
-        LabelTel.Location = New Point(665, 112)
-        LabelTel.Name = "LabelTel"
-        LabelTel.Size = New Size(35, 20)
-        LabelTel.TabIndex = 8
-        LabelTel.Text = "Tel :"
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.Location = New Point(962, 45)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(39, 20)
-        Label7.TabIndex = 9
-        Label7.Text = "Sex :"
-        ' 
-        ' LabelRegdate
-        ' 
-        LabelRegdate.AutoSize = True
-        LabelRegdate.Location = New Point(880, 111)
-        LabelRegdate.Name = "LabelRegdate"
-        LabelRegdate.Size = New Size(132, 20)
-        LabelRegdate.TabIndex = 10
-        LabelRegdate.Text = "Registration Date :"
-        ' 
-        ' txtboxAddress
-        ' 
-        txtboxAddress.BorderStyle = BorderStyle.FixedSingle
-        txtboxAddress.Location = New Point(98, 105)
-        txtboxAddress.Margin = New Padding(3, 4, 3, 4)
-        txtboxAddress.Multiline = True
-        txtboxAddress.Name = "txtboxAddress"
-        txtboxAddress.Size = New Size(207, 121)
-        txtboxAddress.TabIndex = 11
-        ' 
-        ' txtboxLastname
-        ' 
-        txtboxLastname.BorderStyle = BorderStyle.FixedSingle
-        txtboxLastname.Location = New Point(442, 37)
-        txtboxLastname.Margin = New Padding(3, 4, 3, 4)
-        txtboxLastname.Name = "txtboxLastname"
-        txtboxLastname.Size = New Size(125, 27)
-        txtboxLastname.TabIndex = 12
-        ' 
-        ' TextBoxMarittal
-        ' 
-        TextBoxMarittal.BorderStyle = BorderStyle.FixedSingle
-        TextBoxMarittal.Location = New Point(442, 103)
-        TextBoxMarittal.Margin = New Padding(3, 4, 3, 4)
-        TextBoxMarittal.Name = "TextBoxMarittal"
-        TextBoxMarittal.Size = New Size(125, 27)
-        TextBoxMarittal.TabIndex = 13
-        ' 
-        ' TxtBoxTel
-        ' 
-        TxtBoxTel.BorderStyle = BorderStyle.FixedSingle
-        TxtBoxTel.Location = New Point(703, 107)
-        TxtBoxTel.Margin = New Padding(3, 4, 3, 4)
-        TxtBoxTel.Name = "TxtBoxTel"
-        TxtBoxTel.Size = New Size(163, 27)
-        TxtBoxTel.TabIndex = 15
-        ' 
-        ' TxtBoxSex
-        ' 
-        TxtBoxSex.BorderStyle = BorderStyle.FixedSingle
-        TxtBoxSex.Location = New Point(1007, 39)
-        TxtBoxSex.Margin = New Padding(3, 4, 3, 4)
-        TxtBoxSex.Name = "TxtBoxSex"
-        TxtBoxSex.Size = New Size(109, 27)
-        TxtBoxSex.TabIndex = 16
-        ' 
-        ' butAdd
-        ' 
-        butAdd.BackColor = Color.FromArgb(CByte(179), CByte(255), CByte(143))
-        butAdd.Location = New Point(457, 335)
-        butAdd.Margin = New Padding(3, 4, 3, 4)
-        butAdd.Name = "butAdd"
-        butAdd.Size = New Size(86, 31)
-        butAdd.TabIndex = 21
-        butAdd.Text = "ADD"
-        butAdd.UseVisualStyleBackColor = False
-        ' 
-        ' butEdit
-        ' 
-        butEdit.BackColor = Color.FromArgb(CByte(241), CByte(227), CByte(86))
-        butEdit.Location = New Point(585, 335)
-        butEdit.Margin = New Padding(3, 4, 3, 4)
-        butEdit.Name = "butEdit"
-        butEdit.Size = New Size(86, 31)
-        butEdit.TabIndex = 22
-        butEdit.Text = "EDIT"
-        butEdit.UseVisualStyleBackColor = False
-        ' 
-        ' ButDelete
-        ' 
-        ButDelete.BackColor = Color.FromArgb(CByte(252), CByte(136), CByte(136))
-        ButDelete.Location = New Point(709, 335)
-        ButDelete.Margin = New Padding(3, 4, 3, 4)
-        ButDelete.Name = "ButDelete"
-        ButDelete.Size = New Size(86, 31)
-        ButDelete.TabIndex = 23
-        ButDelete.Text = "DELETE"
-        ButDelete.UseVisualStyleBackColor = False
-        ' 
-        ' DataGridView1
-        ' 
-        DataGridView1.BorderStyle = BorderStyle.Fixed3D
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(59, 400)
-        DataGridView1.Margin = New Padding(3, 4, 3, 4)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.RowHeadersWidth = 51
-        DataGridView1.RowTemplate.Height = 25
-        DataGridView1.Size = New Size(1147, 291)
-        DataGridView1.TabIndex = 24
-        ' 
-        ' TextBoxDoB
-        ' 
-        TextBoxDoB.BorderStyle = BorderStyle.FixedSingle
-        TextBoxDoB.Location = New Point(703, 43)
-        TextBoxDoB.Margin = New Padding(3, 4, 3, 4)
-        TextBoxDoB.Name = "TextBoxDoB"
-        TextBoxDoB.Size = New Size(163, 27)
-        TextBoxDoB.TabIndex = 48
-        ' 
-        ' txtBoxSearch
-        ' 
-        txtBoxSearch.BorderStyle = BorderStyle.FixedSingle
-        txtBoxSearch.Location = New Point(997, 351)
-        txtBoxSearch.Margin = New Padding(3, 4, 3, 4)
-        txtBoxSearch.Name = "txtBoxSearch"
-        txtBoxSearch.Size = New Size(165, 27)
-        txtBoxSearch.TabIndex = 52
-        ' 
-        ' Panel1
-        ' 
-        Panel1.BorderStyle = BorderStyle.FixedSingle
-        Panel1.Controls.Add(TxtBoxRegisDate)
-        Panel1.Controls.Add(txtboxAddress)
-        Panel1.Controls.Add(txtboxName)
-        Panel1.Controls.Add(LabelName)
-        Panel1.Controls.Add(LabelAddress)
-        Panel1.Controls.Add(txtboxLastname)
-        Panel1.Controls.Add(TextBoxDoB)
-        Panel1.Controls.Add(LabelLastname)
-        Panel1.Controls.Add(LabelStatus)
-        Panel1.Controls.Add(TextBoxMarittal)
-        Panel1.Controls.Add(TxtBoxSex)
-        Panel1.Controls.Add(LabelDateofbirth)
-        Panel1.Controls.Add(LabelRegdate)
-        Panel1.Controls.Add(LabelTel)
-        Panel1.Controls.Add(Label7)
-        Panel1.Controls.Add(TxtBoxTel)
-        Panel1.Location = New Point(45, 71)
-        Panel1.Margin = New Padding(3, 4, 3, 4)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1175, 241)
-        Panel1.TabIndex = 53
-        ' 
-        ' TxtBoxRegisDate
-        ' 
-        TxtBoxRegisDate.CustomFormat = "yyyy-MM-dd"
-        TxtBoxRegisDate.Location = New Point(1007, 104)
-        TxtBoxRegisDate.Margin = New Padding(3, 4, 3, 4)
-        TxtBoxRegisDate.Name = "TxtBoxRegisDate"
-        TxtBoxRegisDate.Size = New Size(117, 27)
-        TxtBoxRegisDate.TabIndex = 49
-        ' 
-        ' btnsearchpatient
-        ' 
-        btnsearchpatient.Image = CType(resources.GetObject("btnsearchpatient.Image"), Image)
-        btnsearchpatient.Location = New Point(1169, 349)
-        btnsearchpatient.Margin = New Padding(3, 4, 3, 4)
-        btnsearchpatient.Name = "btnsearchpatient"
-        btnsearchpatient.Size = New Size(41, 36)
-        btnsearchpatient.SizeMode = PictureBoxSizeMode.Zoom
-        btnsearchpatient.TabIndex = 69
-        btnsearchpatient.TabStop = False
-        ' 
-        ' Button1
-        ' 
-        Button1.BackColor = Color.FromArgb(CByte(179), CByte(255), CByte(143))
-        Button1.Location = New Point(74, 355)
-        Button1.Margin = New Padding(3, 4, 3, 4)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(158, 31)
-        Button1.TabIndex = 70
-        Button1.Text = "OUT PATIENTS LIST"
-        Button1.UseVisualStyleBackColor = False
-        ' 
-        ' Button2
-        ' 
-        Button2.BackColor = Color.FromArgb(CByte(179), CByte(255), CByte(143))
-        Button2.Location = New Point(239, 355)
-        Button2.Margin = New Padding(3, 4, 3, 4)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(158, 31)
-        Button2.TabIndex = 71
-        Button2.Text = "PATIENTS IN WARD"
-        Button2.UseVisualStyleBackColor = False
-        ' 
-        ' Patient
-        ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
-        AutoSize = True
-        AutoValidate = AutoValidate.EnablePreventFocusChange
-        BackColor = SystemColors.ControlLightLight
-        ClientSize = New Size(1266, 709)
-        Controls.Add(Button2)
-        Controls.Add(Button1)
-        Controls.Add(btnsearchpatient)
-        Controls.Add(Panel1)
-        Controls.Add(txtBoxSearch)
-        Controls.Add(DataGridView1)
-        Controls.Add(ButDelete)
-        Controls.Add(butEdit)
-        Controls.Add(butAdd)
-        Controls.Add(LabelPatients)
-        FormBorderStyle = FormBorderStyle.None
-        Margin = New Padding(3, 4, 3, 4)
-        Name = "Patient"
-        Text = "Patient"
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
-        Panel1.ResumeLayout(False)
-        Panel1.PerformLayout()
-        CType(btnsearchpatient, ComponentModel.ISupportInitialize).EndInit()
-        ResumeLayout(False)
-        PerformLayout()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Patient))
+        Me.LabelPatients = New System.Windows.Forms.Label()
+        Me.txtboxName = New System.Windows.Forms.TextBox()
+        Me.LabelName = New System.Windows.Forms.Label()
+        Me.LabelAddress = New System.Windows.Forms.Label()
+        Me.LabelLastname = New System.Windows.Forms.Label()
+        Me.LabelStatus = New System.Windows.Forms.Label()
+        Me.LabelDateofbirth = New System.Windows.Forms.Label()
+        Me.LabelTel = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.LabelRegdate = New System.Windows.Forms.Label()
+        Me.txtboxAddress = New System.Windows.Forms.TextBox()
+        Me.txtboxLastname = New System.Windows.Forms.TextBox()
+        Me.TextBoxMarittal = New System.Windows.Forms.TextBox()
+        Me.TxtBoxTel = New System.Windows.Forms.TextBox()
+        Me.butAdd = New System.Windows.Forms.Button()
+        Me.butEdit = New System.Windows.Forms.Button()
+        Me.ButDelete = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.txtBoxSearch = New System.Windows.Forms.TextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TxtBoxSex = New System.Windows.Forms.ComboBox()
+        Me.DateTimePickerDob = New System.Windows.Forms.DateTimePicker()
+        Me.TxtBoxRegisDate = New System.Windows.Forms.DateTimePicker()
+        Me.btnsearchpatient = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.btnsearchpatient, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'LabelPatients
+        '
+        Me.LabelPatients.AutoSize = True
+        Me.LabelPatients.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.LabelPatients.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.LabelPatients.Location = New System.Drawing.Point(498, 9)
+        Me.LabelPatients.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LabelPatients.Name = "LabelPatients"
+        Me.LabelPatients.Size = New System.Drawing.Size(110, 30)
+        Me.LabelPatients.TabIndex = 0
+        Me.LabelPatients.Text = "PATIENTS"
+        '
+        'txtboxName
+        '
+        Me.txtboxName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtboxName.Location = New System.Drawing.Point(74, 24)
+        Me.txtboxName.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.txtboxName.Name = "txtboxName"
+        Me.txtboxName.Size = New System.Drawing.Size(156, 20)
+        Me.txtboxName.TabIndex = 2
+        '
+        'LabelName
+        '
+        Me.LabelName.AutoSize = True
+        Me.LabelName.Location = New System.Drawing.Point(22, 27)
+        Me.LabelName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LabelName.Name = "LabelName"
+        Me.LabelName.Size = New System.Drawing.Size(41, 13)
+        Me.LabelName.TabIndex = 3
+        Me.LabelName.Text = "Name :"
+        '
+        'LabelAddress
+        '
+        Me.LabelAddress.AutoSize = True
+        Me.LabelAddress.Location = New System.Drawing.Point(22, 70)
+        Me.LabelAddress.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LabelAddress.Name = "LabelAddress"
+        Me.LabelAddress.Size = New System.Drawing.Size(51, 13)
+        Me.LabelAddress.TabIndex = 4
+        Me.LabelAddress.Text = "Address :"
+        '
+        'LabelLastname
+        '
+        Me.LabelLastname.AutoSize = True
+        Me.LabelLastname.Location = New System.Drawing.Point(298, 28)
+        Me.LabelLastname.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LabelLastname.Name = "LabelLastname"
+        Me.LabelLastname.Size = New System.Drawing.Size(59, 13)
+        Me.LabelLastname.TabIndex = 5
+        Me.LabelLastname.Text = "Lastname :"
+        '
+        'LabelStatus
+        '
+        Me.LabelStatus.AutoSize = True
+        Me.LabelStatus.Location = New System.Drawing.Point(277, 70)
+        Me.LabelStatus.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LabelStatus.Name = "LabelStatus"
+        Me.LabelStatus.Size = New System.Drawing.Size(77, 13)
+        Me.LabelStatus.TabIndex = 6
+        Me.LabelStatus.Text = "Marital Status :"
+        '
+        'LabelDateofbirth
+        '
+        Me.LabelDateofbirth.AutoSize = True
+        Me.LabelDateofbirth.Location = New System.Drawing.Point(532, 29)
+        Me.LabelDateofbirth.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LabelDateofbirth.Name = "LabelDateofbirth"
+        Me.LabelDateofbirth.Size = New System.Drawing.Size(72, 13)
+        Me.LabelDateofbirth.TabIndex = 7
+        Me.LabelDateofbirth.Text = "Date of Birth :"
+        '
+        'LabelTel
+        '
+        Me.LabelTel.AutoSize = True
+        Me.LabelTel.Location = New System.Drawing.Point(577, 73)
+        Me.LabelTel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LabelTel.Name = "LabelTel"
+        Me.LabelTel.Size = New System.Drawing.Size(28, 13)
+        Me.LabelTel.TabIndex = 8
+        Me.LabelTel.Text = "Tel :"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(846, 31)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(31, 13)
+        Me.Label7.TabIndex = 9
+        Me.Label7.Text = "Sex :"
+        '
+        'LabelRegdate
+        '
+        Me.LabelRegdate.AutoSize = True
+        Me.LabelRegdate.Location = New System.Drawing.Point(784, 74)
+        Me.LabelRegdate.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LabelRegdate.Name = "LabelRegdate"
+        Me.LabelRegdate.Size = New System.Drawing.Size(95, 13)
+        Me.LabelRegdate.TabIndex = 10
+        Me.LabelRegdate.Text = "Registration Date :"
+        '
+        'txtboxAddress
+        '
+        Me.txtboxAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtboxAddress.Location = New System.Drawing.Point(74, 68)
+        Me.txtboxAddress.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.txtboxAddress.Multiline = True
+        Me.txtboxAddress.Name = "txtboxAddress"
+        Me.txtboxAddress.Size = New System.Drawing.Size(156, 79)
+        Me.txtboxAddress.TabIndex = 11
+        '
+        'txtboxLastname
+        '
+        Me.txtboxLastname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtboxLastname.Location = New System.Drawing.Point(362, 23)
+        Me.txtboxLastname.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.txtboxLastname.Name = "txtboxLastname"
+        Me.txtboxLastname.Size = New System.Drawing.Size(134, 20)
+        Me.txtboxLastname.TabIndex = 12
+        '
+        'TextBoxMarittal
+        '
+        Me.TextBoxMarittal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBoxMarittal.Location = New System.Drawing.Point(362, 66)
+        Me.TextBoxMarittal.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TextBoxMarittal.Name = "TextBoxMarittal"
+        Me.TextBoxMarittal.Size = New System.Drawing.Size(134, 20)
+        Me.TextBoxMarittal.TabIndex = 13
+        '
+        'TxtBoxTel
+        '
+        Me.TxtBoxTel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtBoxTel.Location = New System.Drawing.Point(605, 70)
+        Me.TxtBoxTel.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TxtBoxTel.Name = "TxtBoxTel"
+        Me.TxtBoxTel.Size = New System.Drawing.Size(123, 20)
+        Me.TxtBoxTel.TabIndex = 15
+        '
+        'butAdd
+        '
+        Me.butAdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(179, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.butAdd.Location = New System.Drawing.Point(427, 229)
+        Me.butAdd.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.butAdd.Name = "butAdd"
+        Me.butAdd.Size = New System.Drawing.Size(64, 20)
+        Me.butAdd.TabIndex = 21
+        Me.butAdd.Text = "ADD"
+        Me.butAdd.UseVisualStyleBackColor = False
+        '
+        'butEdit
+        '
+        Me.butEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(86, Byte), Integer))
+        Me.butEdit.Location = New System.Drawing.Point(523, 229)
+        Me.butEdit.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.butEdit.Name = "butEdit"
+        Me.butEdit.Size = New System.Drawing.Size(64, 20)
+        Me.butEdit.TabIndex = 22
+        Me.butEdit.Text = "EDIT"
+        Me.butEdit.UseVisualStyleBackColor = False
+        '
+        'ButDelete
+        '
+        Me.ButDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer))
+        Me.ButDelete.Location = New System.Drawing.Point(616, 229)
+        Me.ButDelete.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.ButDelete.Name = "ButDelete"
+        Me.ButDelete.Size = New System.Drawing.Size(64, 20)
+        Me.ButDelete.TabIndex = 23
+        Me.ButDelete.Text = "DELETE"
+        Me.ButDelete.UseVisualStyleBackColor = False
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(44, 260)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 25
+        Me.DataGridView1.Size = New System.Drawing.Size(992, 312)
+        Me.DataGridView1.TabIndex = 24
+        '
+        'txtBoxSearch
+        '
+        Me.txtBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtBoxSearch.Location = New System.Drawing.Point(879, 231)
+        Me.txtBoxSearch.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.txtBoxSearch.Name = "txtBoxSearch"
+        Me.txtBoxSearch.Size = New System.Drawing.Size(124, 20)
+        Me.txtBoxSearch.TabIndex = 52
+        '
+        'Panel1
+        '
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.TxtBoxSex)
+        Me.Panel1.Controls.Add(Me.DateTimePickerDob)
+        Me.Panel1.Controls.Add(Me.TxtBoxRegisDate)
+        Me.Panel1.Controls.Add(Me.txtboxAddress)
+        Me.Panel1.Controls.Add(Me.txtboxName)
+        Me.Panel1.Controls.Add(Me.LabelName)
+        Me.Panel1.Controls.Add(Me.LabelAddress)
+        Me.Panel1.Controls.Add(Me.txtboxLastname)
+        Me.Panel1.Controls.Add(Me.LabelLastname)
+        Me.Panel1.Controls.Add(Me.LabelStatus)
+        Me.Panel1.Controls.Add(Me.TextBoxMarittal)
+        Me.Panel1.Controls.Add(Me.LabelDateofbirth)
+        Me.Panel1.Controls.Add(Me.LabelRegdate)
+        Me.Panel1.Controls.Add(Me.LabelTel)
+        Me.Panel1.Controls.Add(Me.Label7)
+        Me.Panel1.Controls.Add(Me.TxtBoxTel)
+        Me.Panel1.Location = New System.Drawing.Point(34, 46)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1002, 157)
+        Me.Panel1.TabIndex = 53
+        '
+        'TxtBoxSex
+        '
+        Me.TxtBoxSex.FormattingEnabled = True
+        Me.TxtBoxSex.Items.AddRange(New Object() {"M", "F"})
+        Me.TxtBoxSex.Location = New System.Drawing.Point(882, 26)
+        Me.TxtBoxSex.Name = "TxtBoxSex"
+        Me.TxtBoxSex.Size = New System.Drawing.Size(82, 21)
+        Me.TxtBoxSex.TabIndex = 51
+        '
+        'DateTimePickerDob
+        '
+        Me.DateTimePickerDob.Location = New System.Drawing.Point(605, 24)
+        Me.DateTimePickerDob.Name = "DateTimePickerDob"
+        Me.DateTimePickerDob.Size = New System.Drawing.Size(123, 20)
+        Me.DateTimePickerDob.TabIndex = 50
+        '
+        'TxtBoxRegisDate
+        '
+        Me.TxtBoxRegisDate.CustomFormat = "yyyy-MM-dd"
+        Me.TxtBoxRegisDate.Location = New System.Drawing.Point(879, 70)
+        Me.TxtBoxRegisDate.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.TxtBoxRegisDate.Name = "TxtBoxRegisDate"
+        Me.TxtBoxRegisDate.Size = New System.Drawing.Size(89, 20)
+        Me.TxtBoxRegisDate.TabIndex = 49
+        '
+        'btnsearchpatient
+        '
+        Me.btnsearchpatient.Image = CType(resources.GetObject("btnsearchpatient.Image"), System.Drawing.Image)
+        Me.btnsearchpatient.Location = New System.Drawing.Point(1008, 230)
+        Me.btnsearchpatient.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.btnsearchpatient.Name = "btnsearchpatient"
+        Me.btnsearchpatient.Size = New System.Drawing.Size(31, 23)
+        Me.btnsearchpatient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnsearchpatient.TabIndex = 69
+        Me.btnsearchpatient.TabStop = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(179, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.Button1.Location = New System.Drawing.Point(56, 231)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(118, 20)
+        Me.Button1.TabIndex = 70
+        Me.Button1.Text = "OUT PATIENTS LIST"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(179, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.Button2.Location = New System.Drawing.Point(179, 231)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(118, 20)
+        Me.Button2.TabIndex = 71
+        Me.Button2.Text = "PATIENTS IN WARD"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Patient
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
+        Me.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange
+        Me.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.ClientSize = New System.Drawing.Size(1073, 602)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnsearchpatient)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.txtBoxSearch)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.ButDelete)
+        Me.Controls.Add(Me.butEdit)
+        Me.Controls.Add(Me.butAdd)
+        Me.Controls.Add(Me.LabelPatients)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Name = "Patient"
+        Me.Text = "Patient"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.btnsearchpatient, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
     Friend WithEvents LabelPatients As Label
@@ -366,16 +374,16 @@ Partial Class Patient
     Friend WithEvents txtboxLastname As TextBox
     Friend WithEvents TextBoxMarittal As TextBox
     Friend WithEvents TxtBoxTel As TextBox
-    Friend WithEvents TxtBoxSex As TextBox
     Friend WithEvents butAdd As Button
     Friend WithEvents butEdit As Button
     Friend WithEvents ButDelete As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents TextBoxDoB As TextBox
     Friend WithEvents txtBoxSearch As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnsearchpatient As PictureBox
     Friend WithEvents TxtBoxRegisDate As DateTimePicker
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents DateTimePickerDob As DateTimePicker
+    Friend WithEvents TxtBoxSex As ComboBox
 End Class

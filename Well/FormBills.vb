@@ -2,7 +2,8 @@
 
 Public Class FormBills
 
-    Dim connectionString As String = "Data Source=144.24.38.124\SQLEXPRESS,1433;Initial Catalog=Project;User Id=admin;Password=adminadminadmin"
+    'Dim connectionString As String = "Data Source=144.24.38.124\SQLEXPRESS,1433;Initial Catalog=Project;User Id=admin;Password=adminadminadmin"
+    Dim connectionString As String = "Data Source=124.121.233.223\SQLEXPRESS,1433;Initial Catalog=Project ;User Id=admin;Password=adminadminadmin"
     Dim sqlConnection As New SqlConnection(connectionString)
     Private selectedPatientID As String = ""
 
@@ -187,23 +188,31 @@ Public Class FormBills
     End Sub
 
     Private Sub PatientSearch_Click(sender As Object, e As EventArgs) Handles PatientSearch.Click
+        'Dim newFormSChoPatien As ChoosPatien ' สร้างตัวแปรสำหรับฟอร์มใหม่
+        'newFormSChoPatien = New ChoosPatien()
+        'newFormSChoPatien.ShowDialog()
+        'patid_txt.Text = newFormSChoPatien.PatienID
+
         Try
             Dim sForm As New SearchPatient()
             sForm.ShowDialog()
 
-            ' Check if PatientName and PatientLastName are not empty
+            ' Check if PatientName and PatientLastName are not empty ''
+
             If Not String.IsNullOrEmpty(sForm.PatientName) AndAlso Not String.IsNullOrEmpty(sForm.PatientLastName) Then
-                ' Concatenate the first name and last name and display in pat_name TextBox
+                'Concatenate the first name And last name And display in pat_name TextBox
                 pat_name.Text = sForm.PatientName & " " & sForm.PatientLastName
             Else
-                ' Handle the case where either PatientName or PatientLastName is empty
+                'Handle the case where either PatientName Or PatientLastName Is empty
                 pat_name.Text = ""
             End If
 
-            ' Update patid_txt with the selected PatientID
+            'Update patid_txt with the selected PatientID ''
+
             patid_txt.Text = sForm.PatientId
 
-            ' Load BillIDs for the selected patient
+            'Load BillIDs for the selected patient ''
+
             LoadBillIDsForPatient(sForm.PatientId)
         Catch ex As Exception
             MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -246,9 +255,5 @@ Public Class FormBills
             MessageBox.Show("เกิดปัญหาในการคำนวนเงิน(Totalamount)")
         End Try
     End Sub
-
-
-
-
 
 End Class

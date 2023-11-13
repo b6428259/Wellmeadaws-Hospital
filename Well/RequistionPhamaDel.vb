@@ -6,7 +6,7 @@ Imports Org.BouncyCastle.Ocsp
 
 Public Class RequistionPhamaDel
 
-    Dim connectionString As String = "Data Source=144.24.38.124\SQLEXPRESS,1433;Initial Catalog=Project ;User Id=admin;Password=adminadminadmin"
+    Dim connectionString As String = "Data Source=124.121.233.223\SQLEXPRESS,1433;Initial Catalog=Project ;User Id=admin;Password=adminadminadmin"
     Dim sqlConnection As New SqlConnection(connectionString)
 
 

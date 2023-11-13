@@ -1,0 +1,914 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ProjectDataSet1" targetNamespace="http://tempuri.org/ProjectDataSet1.xsd" xmlns:mstns="http://tempuri.org/ProjectDataSet1.xsd" xmlns="http://tempuri.org/ProjectDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="AppointData" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AppointData (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Wellmeadaws.My.MySettings.GlobalReference.Default.AppointData" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AppointmentViewTableAdapter" GeneratorDataComponentClassName="AppointmentViewTableAdapter" Name="AppointmentView" UserDataComponentName="AppointmentViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AppointData (MySettings)" DbObjectName="Project.dbo.AppointmentView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT AppointmentID, PatientID, FirstName, LastName, AppointmentDate, WardID, WardName, Diagnosis, TreatmentPlan FROM dbo.AppointmentView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AppointmentID" DataSetColumn="AppointmentID" />
+              <Mapping SourceColumn="PatientID" DataSetColumn="PatientID" />
+              <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
+              <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
+              <Mapping SourceColumn="AppointmentDate" DataSetColumn="AppointmentDate" />
+              <Mapping SourceColumn="WardID" DataSetColumn="WardID" />
+              <Mapping SourceColumn="WardName" DataSetColumn="WardName" />
+              <Mapping SourceColumn="Diagnosis" DataSetColumn="Diagnosis" />
+              <Mapping SourceColumn="TreatmentPlan" DataSetColumn="TreatmentPlan" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RequisitionsTableAdapter" GeneratorDataComponentClassName="RequisitionsTableAdapter" Name="Requisitions" UserDataComponentName="RequisitionsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AppointData (MySettings)" DbObjectName="Project.dbo.Requisitions" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Requisitions] WHERE (([RequisitionID] = @Original_RequisitionID) AND ((@IsNull_StaffID = 1 AND [StaffID] IS NULL) OR ([StaffID] = @Original_StaffID)) AND ((@IsNull_WardID = 1 AND [WardID] IS NULL) OR ([WardID] = @Original_WardID)) AND ((@IsNull_RequisitionDate = 1 AND [RequisitionDate] IS NULL) OR ([RequisitionDate] = @Original_RequisitionDate)) AND ((@IsNull_RequisitionType = 1 AND [RequisitionType] IS NULL) OR ([RequisitionType] = @Original_RequisitionType)) AND ((@IsNull_SupplierID = 1 AND [SupplierID] IS NULL) OR ([SupplierID] = @Original_SupplierID)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_RequisitionID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RequisitionID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StaffID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StaffID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_StaffID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StaffID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_WardID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WardID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_WardID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="WardID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RequisitionDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RequisitionDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_RequisitionDate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="RequisitionDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RequisitionType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RequisitionType" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_RequisitionType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RequisitionType" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SupplierID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SupplierID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SupplierID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SupplierID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Requisitions] ([RequisitionID], [StaffID], [WardID], [RequisitionDate], [RequisitionType], [SupplierID]) VALUES (@RequisitionID, @StaffID, @WardID, @RequisitionDate, @RequisitionType, @SupplierID);
+SELECT RequisitionID, StaffID, WardID, RequisitionDate, RequisitionType, SupplierID FROM Requisitions WHERE (RequisitionID = @RequisitionID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@RequisitionID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RequisitionID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@StaffID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StaffID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@WardID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="WardID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@RequisitionDate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="RequisitionDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@RequisitionType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RequisitionType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SupplierID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SupplierID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT RequisitionID, StaffID, WardID, RequisitionDate, RequisitionType, SupplierID FROM dbo.Requisitions</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Requisitions] SET [RequisitionID] = @RequisitionID, [StaffID] = @StaffID, [WardID] = @WardID, [RequisitionDate] = @RequisitionDate, [RequisitionType] = @RequisitionType, [SupplierID] = @SupplierID WHERE (([RequisitionID] = @Original_RequisitionID) AND ((@IsNull_StaffID = 1 AND [StaffID] IS NULL) OR ([StaffID] = @Original_StaffID)) AND ((@IsNull_WardID = 1 AND [WardID] IS NULL) OR ([WardID] = @Original_WardID)) AND ((@IsNull_RequisitionDate = 1 AND [RequisitionDate] IS NULL) OR ([RequisitionDate] = @Original_RequisitionDate)) AND ((@IsNull_RequisitionType = 1 AND [RequisitionType] IS NULL) OR ([RequisitionType] = @Original_RequisitionType)) AND ((@IsNull_SupplierID = 1 AND [SupplierID] IS NULL) OR ([SupplierID] = @Original_SupplierID)));
+SELECT RequisitionID, StaffID, WardID, RequisitionDate, RequisitionType, SupplierID FROM Requisitions WHERE (RequisitionID = @RequisitionID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@RequisitionID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RequisitionID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@StaffID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StaffID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@WardID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="WardID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@RequisitionDate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="RequisitionDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@RequisitionType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RequisitionType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SupplierID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SupplierID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_RequisitionID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RequisitionID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StaffID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StaffID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_StaffID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="StaffID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_WardID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WardID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_WardID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="WardID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RequisitionDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RequisitionDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_RequisitionDate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="RequisitionDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RequisitionType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RequisitionType" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_RequisitionType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RequisitionType" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SupplierID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SupplierID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SupplierID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SupplierID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RequisitionID" DataSetColumn="RequisitionID" />
+              <Mapping SourceColumn="StaffID" DataSetColumn="StaffID" />
+              <Mapping SourceColumn="WardID" DataSetColumn="WardID" />
+              <Mapping SourceColumn="RequisitionDate" DataSetColumn="RequisitionDate" />
+              <Mapping SourceColumn="RequisitionType" DataSetColumn="RequisitionType" />
+              <Mapping SourceColumn="SupplierID" DataSetColumn="SupplierID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NonSurgicalSuppliesTableAdapter" GeneratorDataComponentClassName="NonSurgicalSuppliesTableAdapter" Name="NonSurgicalSupplies" UserDataComponentName="NonSurgicalSuppliesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AppointData (MySettings)" DbObjectName="Project.dbo.NonSurgicalSupplies" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[NonSurgicalSupplies] WHERE (([SupplyID] = @Original_SupplyID) AND ((@IsNull_SupplierID = 1 AND [SupplierID] IS NULL) OR ([SupplierID] = @Original_SupplierID)) AND ((@IsNull_ItemNumber = 1 AND [ItemNumber] IS NULL) OR ([ItemNumber] = @Original_ItemNumber)) AND ((@IsNull_ItemName = 1 AND [ItemName] IS NULL) OR ([ItemName] = @Original_ItemName)) AND ((@IsNull_ItemDescription = 1 AND [ItemDescription] IS NULL) OR ([ItemDescription] = @Original_ItemDescription)) AND ((@IsNull_QuantityInStock = 1 AND [QuantityInStock] IS NULL) OR ([QuantityInStock] = @Original_QuantityInStock)) AND ((@IsNull_ReorderLevel = 1 AND [ReorderLevel] IS NULL) OR ([ReorderLevel] = @Original_ReorderLevel)) AND ((@IsNull_CostPerUnit = 1 AND [CostPerUnit] IS NULL) OR ([CostPerUnit] = @Original_CostPerUnit)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SupplyID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SupplyID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SupplierID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SupplierID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SupplierID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SupplierID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ItemNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ItemNumber" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ItemNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ItemName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ItemName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ItemDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ItemDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ItemDescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_QuantityInStock" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="QuantityInStock" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_QuantityInStock" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="QuantityInStock" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ReorderLevel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReorderLevel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ReorderLevel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReorderLevel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CostPerUnit" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CostPerUnit" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_CostPerUnit" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="CostPerUnit" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[NonSurgicalSupplies] ([SupplyID], [SupplierID], [ItemNumber], [ItemName], [ItemDescription], [QuantityInStock], [ReorderLevel], [CostPerUnit]) VALUES (@SupplyID, @SupplierID, @ItemNumber, @ItemName, @ItemDescription, @QuantityInStock, @ReorderLevel, @CostPerUnit);
+SELECT SupplyID, SupplierID, ItemNumber, ItemName, ItemDescription, QuantityInStock, ReorderLevel, CostPerUnit FROM NonSurgicalSupplies WHERE (SupplyID = @SupplyID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SupplyID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SupplyID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SupplierID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SupplierID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ItemNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ItemDescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@QuantityInStock" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="QuantityInStock" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ReorderLevel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReorderLevel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@CostPerUnit" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="CostPerUnit" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT SupplyID, SupplierID, ItemNumber, ItemName, ItemDescription, QuantityInStock, ReorderLevel, CostPerUnit FROM dbo.NonSurgicalSupplies</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[NonSurgicalSupplies] SET [SupplyID] = @SupplyID, [SupplierID] = @SupplierID, [ItemNumber] = @ItemNumber, [ItemName] = @ItemName, [ItemDescription] = @ItemDescription, [QuantityInStock] = @QuantityInStock, [ReorderLevel] = @ReorderLevel, [CostPerUnit] = @CostPerUnit WHERE (([SupplyID] = @Original_SupplyID) AND ((@IsNull_SupplierID = 1 AND [SupplierID] IS NULL) OR ([SupplierID] = @Original_SupplierID)) AND ((@IsNull_ItemNumber = 1 AND [ItemNumber] IS NULL) OR ([ItemNumber] = @Original_ItemNumber)) AND ((@IsNull_ItemName = 1 AND [ItemName] IS NULL) OR ([ItemName] = @Original_ItemName)) AND ((@IsNull_ItemDescription = 1 AND [ItemDescription] IS NULL) OR ([ItemDescription] = @Original_ItemDescription)) AND ((@IsNull_QuantityInStock = 1 AND [QuantityInStock] IS NULL) OR ([QuantityInStock] = @Original_QuantityInStock)) AND ((@IsNull_ReorderLevel = 1 AND [ReorderLevel] IS NULL) OR ([ReorderLevel] = @Original_ReorderLevel)) AND ((@IsNull_CostPerUnit = 1 AND [CostPerUnit] IS NULL) OR ([CostPerUnit] = @Original_CostPerUnit)));
+SELECT SupplyID, SupplierID, ItemNumber, ItemName, ItemDescription, QuantityInStock, ReorderLevel, CostPerUnit FROM NonSurgicalSupplies WHERE (SupplyID = @SupplyID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SupplyID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SupplyID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SupplierID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SupplierID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ItemNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ItemDescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@QuantityInStock" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="QuantityInStock" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ReorderLevel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReorderLevel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@CostPerUnit" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="CostPerUnit" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SupplyID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SupplyID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SupplierID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SupplierID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SupplierID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SupplierID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ItemNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ItemNumber" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ItemNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ItemName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ItemName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ItemDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ItemDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ItemDescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_QuantityInStock" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="QuantityInStock" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_QuantityInStock" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="QuantityInStock" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ReorderLevel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReorderLevel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ReorderLevel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReorderLevel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CostPerUnit" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CostPerUnit" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_CostPerUnit" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="CostPerUnit" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SupplyID" DataSetColumn="SupplyID" />
+              <Mapping SourceColumn="SupplierID" DataSetColumn="SupplierID" />
+              <Mapping SourceColumn="ItemNumber" DataSetColumn="ItemNumber" />
+              <Mapping SourceColumn="ItemName" DataSetColumn="ItemName" />
+              <Mapping SourceColumn="ItemDescription" DataSetColumn="ItemDescription" />
+              <Mapping SourceColumn="QuantityInStock" DataSetColumn="QuantityInStock" />
+              <Mapping SourceColumn="ReorderLevel" DataSetColumn="ReorderLevel" />
+              <Mapping SourceColumn="CostPerUnit" DataSetColumn="CostPerUnit" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PharmaceuticalSuppliesTableAdapter" GeneratorDataComponentClassName="PharmaceuticalSuppliesTableAdapter" Name="PharmaceuticalSupplies" UserDataComponentName="PharmaceuticalSuppliesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AppointData (MySettings)" DbObjectName="Project.dbo.PharmaceuticalSupplies" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[PharmaceuticalSupplies] WHERE (([SupplyID] = @Original_SupplyID) AND ((@IsNull_SupplierID = 1 AND [SupplierID] IS NULL) OR ([SupplierID] = @Original_SupplierID)) AND ((@IsNull_DrugNumber = 1 AND [DrugNumber] IS NULL) OR ([DrugNumber] = @Original_DrugNumber)) AND ((@IsNull_DrugName = 1 AND [DrugName] IS NULL) OR ([DrugName] = @Original_DrugName)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_Dosage = 1 AND [Dosage] IS NULL) OR ([Dosage] = @Original_Dosage)) AND ((@IsNull_MethodOfAdministration = 1 AND [MethodOfAdministration] IS NULL) OR ([MethodOfAdministration] = @Original_MethodOfAdministration)) AND ((@IsNull_QuantityInStock = 1 AND [QuantityInStock] IS NULL) OR ([QuantityInStock] = @Original_QuantityInStock)) AND ((@IsNull_ReorderLevel = 1 AND [ReorderLevel] IS NULL) OR ([ReorderLevel] = @Original_ReorderLevel)) AND ((@IsNull_CostPerUnit = 1 AND [CostPerUnit] IS NULL) OR ([CostPerUnit] = @Original_CostPerUnit)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SupplyID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SupplyID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SupplierID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SupplierID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SupplierID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SupplierID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DrugNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrugNumber" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_DrugNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DrugNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DrugName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrugName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_DrugName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DrugName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Dosage" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Dosage" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Dosage" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Dosage" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MethodOfAdministration" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MethodOfAdministration" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_MethodOfAdministration" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="MethodOfAdministration" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_QuantityInStock" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="QuantityInStock" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_QuantityInStock" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="QuantityInStock" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ReorderLevel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReorderLevel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ReorderLevel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReorderLevel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CostPerUnit" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CostPerUnit" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_CostPerUnit" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="CostPerUnit" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[PharmaceuticalSupplies] ([SupplyID], [SupplierID], [DrugNumber], [DrugName], [Description], [Dosage], [MethodOfAdministration], [QuantityInStock], [ReorderLevel], [CostPerUnit]) VALUES (@SupplyID, @SupplierID, @DrugNumber, @DrugName, @Description, @Dosage, @MethodOfAdministration, @QuantityInStock, @ReorderLevel, @CostPerUnit);
+SELECT SupplyID, SupplierID, DrugNumber, DrugName, Description, Dosage, MethodOfAdministration, QuantityInStock, ReorderLevel, CostPerUnit FROM PharmaceuticalSupplies WHERE (SupplyID = @SupplyID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SupplyID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SupplyID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SupplierID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SupplierID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@DrugNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DrugNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@DrugName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DrugName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Dosage" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Dosage" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@MethodOfAdministration" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="MethodOfAdministration" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@QuantityInStock" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="QuantityInStock" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ReorderLevel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReorderLevel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@CostPerUnit" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="CostPerUnit" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT SupplyID, SupplierID, DrugNumber, DrugName, Description, Dosage, MethodOfAdministration, QuantityInStock, ReorderLevel, CostPerUnit FROM dbo.PharmaceuticalSupplies</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[PharmaceuticalSupplies] SET [SupplyID] = @SupplyID, [SupplierID] = @SupplierID, [DrugNumber] = @DrugNumber, [DrugName] = @DrugName, [Description] = @Description, [Dosage] = @Dosage, [MethodOfAdministration] = @MethodOfAdministration, [QuantityInStock] = @QuantityInStock, [ReorderLevel] = @ReorderLevel, [CostPerUnit] = @CostPerUnit WHERE (([SupplyID] = @Original_SupplyID) AND ((@IsNull_SupplierID = 1 AND [SupplierID] IS NULL) OR ([SupplierID] = @Original_SupplierID)) AND ((@IsNull_DrugNumber = 1 AND [DrugNumber] IS NULL) OR ([DrugNumber] = @Original_DrugNumber)) AND ((@IsNull_DrugName = 1 AND [DrugName] IS NULL) OR ([DrugName] = @Original_DrugName)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_Dosage = 1 AND [Dosage] IS NULL) OR ([Dosage] = @Original_Dosage)) AND ((@IsNull_MethodOfAdministration = 1 AND [MethodOfAdministration] IS NULL) OR ([MethodOfAdministration] = @Original_MethodOfAdministration)) AND ((@IsNull_QuantityInStock = 1 AND [QuantityInStock] IS NULL) OR ([QuantityInStock] = @Original_QuantityInStock)) AND ((@IsNull_ReorderLevel = 1 AND [ReorderLevel] IS NULL) OR ([ReorderLevel] = @Original_ReorderLevel)) AND ((@IsNull_CostPerUnit = 1 AND [CostPerUnit] IS NULL) OR ([CostPerUnit] = @Original_CostPerUnit)));
+SELECT SupplyID, SupplierID, DrugNumber, DrugName, Description, Dosage, MethodOfAdministration, QuantityInStock, ReorderLevel, CostPerUnit FROM PharmaceuticalSupplies WHERE (SupplyID = @SupplyID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SupplyID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SupplyID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SupplierID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SupplierID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@DrugNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DrugNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@DrugName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DrugName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Dosage" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Dosage" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@MethodOfAdministration" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="MethodOfAdministration" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@QuantityInStock" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="QuantityInStock" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ReorderLevel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReorderLevel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@CostPerUnit" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="CostPerUnit" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SupplyID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SupplyID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SupplierID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SupplierID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SupplierID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SupplierID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DrugNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrugNumber" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_DrugNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DrugNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DrugName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DrugName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_DrugName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DrugName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Dosage" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Dosage" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Dosage" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Dosage" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MethodOfAdministration" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MethodOfAdministration" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_MethodOfAdministration" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="MethodOfAdministration" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_QuantityInStock" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="QuantityInStock" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_QuantityInStock" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="QuantityInStock" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ReorderLevel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReorderLevel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ReorderLevel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReorderLevel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CostPerUnit" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CostPerUnit" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_CostPerUnit" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="CostPerUnit" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SupplyID" DataSetColumn="SupplyID" />
+              <Mapping SourceColumn="SupplierID" DataSetColumn="SupplierID" />
+              <Mapping SourceColumn="DrugNumber" DataSetColumn="DrugNumber" />
+              <Mapping SourceColumn="DrugName" DataSetColumn="DrugName" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Dosage" DataSetColumn="Dosage" />
+              <Mapping SourceColumn="MethodOfAdministration" DataSetColumn="MethodOfAdministration" />
+              <Mapping SourceColumn="QuantityInStock" DataSetColumn="QuantityInStock" />
+              <Mapping SourceColumn="ReorderLevel" DataSetColumn="ReorderLevel" />
+              <Mapping SourceColumn="CostPerUnit" DataSetColumn="CostPerUnit" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RequitsitionPhamaTableAdapter" GeneratorDataComponentClassName="RequitsitionPhamaTableAdapter" Name="RequitsitionPhama" UserDataComponentName="RequitsitionPhamaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AppointData (MySettings)" DbObjectName="Project.dbo.RequitsitionPhama" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[RequitsitionPhama] WHERE (((@IsNull_WardNumber = 1 AND [WardNumber] IS NULL) OR ([WardNumber] = @Original_WardNumber)) AND ([WardName] = @Original_WardName) AND ([Requisitioned_By] = @Original_Requisitioned_By) AND ([Requisitioned_Date] = @Original_Requisitioned_Date) AND ([DrugNumber] = @Original_DrugNumber) AND ([Name] = @Original_Name) AND ([Description] = @Original_Description) AND ([Dosage] = @Original_Dosage) AND ([Method_of_Use] = @Original_Method_of_Use) AND ([Cost_per_Unit] = @Original_Cost_per_Unit) AND ([Quantity] = @Original_Quantity) AND ([Requi] = @Original_Requi))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_WardNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WardNumber" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_WardNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="WardNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_WardName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="WardName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Requisitioned_By" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Requisitioned_By" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_Requisitioned_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Requisitioned_Date" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_DrugNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DrugNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Dosage" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Dosage" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Method_of_Use" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Method_of_Use" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Cost_per_Unit" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Cost_per_Unit" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Quantity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Quantity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Requi" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Requi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[RequitsitionPhama] ([WardNumber], [WardName], [Requisitioned_By], [Requisitioned_Date], [DrugNumber], [Name], [Description], [Dosage], [Method_of_Use], [Cost_per_Unit], [Quantity]) VALUES (@WardNumber, @WardName, @Requisitioned_By, @Requisitioned_Date, @DrugNumber, @Name, @Description, @Dosage, @Method_of_Use, @Cost_per_Unit, @Quantity);
+SELECT WardNumber, WardName, Requisitioned_By, Requisitioned_Date, DrugNumber, Name, Description, Dosage, Method_of_Use, Cost_per_Unit, Quantity, Requi FROM RequitsitionPhama WHERE (Requi = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@WardNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="WardNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@WardName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="WardName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Requisitioned_By" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Requisitioned_By" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Requisitioned_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Requisitioned_Date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@DrugNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DrugNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Dosage" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Dosage" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Method_of_Use" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Method_of_Use" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Cost_per_Unit" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Cost_per_Unit" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Quantity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Quantity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT WardNumber, WardName, Requisitioned_By, Requisitioned_Date, DrugNumber, Name, Description, Dosage, Method_of_Use, Cost_per_Unit, Quantity, Requi FROM dbo.RequitsitionPhama</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[RequitsitionPhama] SET [WardNumber] = @WardNumber, [WardName] = @WardName, [Requisitioned_By] = @Requisitioned_By, [Requisitioned_Date] = @Requisitioned_Date, [DrugNumber] = @DrugNumber, [Name] = @Name, [Description] = @Description, [Dosage] = @Dosage, [Method_of_Use] = @Method_of_Use, [Cost_per_Unit] = @Cost_per_Unit, [Quantity] = @Quantity WHERE (((@IsNull_WardNumber = 1 AND [WardNumber] IS NULL) OR ([WardNumber] = @Original_WardNumber)) AND ([WardName] = @Original_WardName) AND ([Requisitioned_By] = @Original_Requisitioned_By) AND ([Requisitioned_Date] = @Original_Requisitioned_Date) AND ([DrugNumber] = @Original_DrugNumber) AND ([Name] = @Original_Name) AND ([Description] = @Original_Description) AND ([Dosage] = @Original_Dosage) AND ([Method_of_Use] = @Original_Method_of_Use) AND ([Cost_per_Unit] = @Original_Cost_per_Unit) AND ([Quantity] = @Original_Quantity) AND ([Requi] = @Original_Requi));
+SELECT WardNumber, WardName, Requisitioned_By, Requisitioned_Date, DrugNumber, Name, Description, Dosage, Method_of_Use, Cost_per_Unit, Quantity, Requi FROM RequitsitionPhama WHERE (Requi = @Requi)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@WardNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="WardNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@WardName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="WardName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Requisitioned_By" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Requisitioned_By" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Requisitioned_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Requisitioned_Date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@DrugNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DrugNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Dosage" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Dosage" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Method_of_Use" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Method_of_Use" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Cost_per_Unit" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Cost_per_Unit" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Quantity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Quantity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_WardNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WardNumber" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_WardNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="WardNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_WardName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="WardName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Requisitioned_By" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Requisitioned_By" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_Requisitioned_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Requisitioned_Date" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_DrugNumber" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DrugNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Dosage" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Dosage" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Method_of_Use" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Method_of_Use" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Cost_per_Unit" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Cost_per_Unit" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Quantity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Quantity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Requi" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Requi" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Requi" ColumnName="Requi" DataSourceName="Project.dbo.RequitsitionPhama" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Requi" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Requi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="WardNumber" DataSetColumn="WardNumber" />
+              <Mapping SourceColumn="WardName" DataSetColumn="WardName" />
+              <Mapping SourceColumn="Requisitioned_By" DataSetColumn="Requisitioned_By" />
+              <Mapping SourceColumn="Requisitioned_Date" DataSetColumn="Requisitioned_Date" />
+              <Mapping SourceColumn="DrugNumber" DataSetColumn="DrugNumber" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Dosage" DataSetColumn="Dosage" />
+              <Mapping SourceColumn="Method_of_Use" DataSetColumn="Method_of_Use" />
+              <Mapping SourceColumn="Cost_per_Unit" DataSetColumn="Cost_per_Unit" />
+              <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
+              <Mapping SourceColumn="Requi" DataSetColumn="Requi" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RequisitionSurTableAdapter" GeneratorDataComponentClassName="RequisitionSurTableAdapter" Name="RequisitionSur" UserDataComponentName="RequisitionSurTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AppointData (MySettings)" DbObjectName="Project.dbo.RequisitionSur" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[RequisitionSur] WHERE (((@IsNull_WardNumber = 1 AND [WardNumber] IS NULL) OR ([WardNumber] = @Original_WardNumber)) AND ((@IsNull_WardName = 1 AND [WardName] IS NULL) OR ([WardName] = @Original_WardName)) AND ((@IsNull_Requisionby = 1 AND [Requisionby] IS NULL) OR ([Requisionby] = @Original_Requisionby)) AND ((@IsNull_Requidate = 1 AND [Requidate] IS NULL) OR ([Requidate] = @Original_Requidate)) AND ((@IsNull_ItemNumber = 1 AND [ItemNumber] IS NULL) OR ([ItemNumber] = @Original_ItemNumber)) AND ((@IsNull_Iname = 1 AND [Iname] IS NULL) OR ([Iname] = @Original_Iname)) AND ((@IsNull_DesCrip = 1 AND [DesCrip] IS NULL) OR ([DesCrip] = @Original_DesCrip)) AND ((@IsNull_QunInStock = 1 AND [QunInStock] IS NULL) OR ([QunInStock] = @Original_QunInStock)) AND ((@IsNull_MethOfUse = 1 AND [MethOfUse] IS NULL) OR ([MethOfUse] = @Original_MethOfUse)) AND ((@IsNull_CostperUnit = 1 AND [CostperUnit] IS NULL) OR ([CostperUnit] = @Original_CostperUnit)) AND ((@IsNull_Quanti = 1 AND [Quanti] IS NULL) OR ([Quanti] = @Original_Quanti)) AND ([RequiNO] = @Original_RequiNO))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_WardNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WardNumber" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_WardNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="WardNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_WardName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WardName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_WardName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="WardName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Requisionby" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Requisionby" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Requisionby" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Requisionby" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Requidate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Requidate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_Requidate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Requidate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ItemNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ItemNumber" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ItemNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ItemNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Iname" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Iname" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Iname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Iname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DesCrip" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DesCrip" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_DesCrip" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DesCrip" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_QunInStock" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="QunInStock" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_QunInStock" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="QunInStock" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MethOfUse" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MethOfUse" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_MethOfUse" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MethOfUse" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CostperUnit" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CostperUnit" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CostperUnit" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CostperUnit" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Quanti" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Quanti" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Quanti" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Quanti" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_RequiNO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RequiNO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[RequisitionSur] ([WardNumber], [WardName], [Requisionby], [Requidate], [ItemNumber], [Iname], [DesCrip], [QunInStock], [MethOfUse], [CostperUnit], [Quanti]) VALUES (@WardNumber, @WardName, @Requisionby, @Requidate, @ItemNumber, @Iname, @DesCrip, @QunInStock, @MethOfUse, @CostperUnit, @Quanti);
+SELECT WardNumber, WardName, Requisionby, Requidate, ItemNumber, Iname, DesCrip, QunInStock, MethOfUse, CostperUnit, Quanti, RequiNO FROM RequisitionSur WHERE (RequiNO = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@WardNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="WardNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@WardName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="WardName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Requisionby" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Requisionby" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Requidate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Requidate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ItemNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ItemNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Iname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Iname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@DesCrip" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DesCrip" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@QunInStock" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="QunInStock" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MethOfUse" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MethOfUse" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CostperUnit" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CostperUnit" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Quanti" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Quanti" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT WardNumber, WardName, Requisionby, Requidate, ItemNumber, Iname, DesCrip, QunInStock, MethOfUse, CostperUnit, Quanti, RequiNO FROM dbo.RequisitionSur</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[RequisitionSur] SET [WardNumber] = @WardNumber, [WardName] = @WardName, [Requisionby] = @Requisionby, [Requidate] = @Requidate, [ItemNumber] = @ItemNumber, [Iname] = @Iname, [DesCrip] = @DesCrip, [QunInStock] = @QunInStock, [MethOfUse] = @MethOfUse, [CostperUnit] = @CostperUnit, [Quanti] = @Quanti WHERE (((@IsNull_WardNumber = 1 AND [WardNumber] IS NULL) OR ([WardNumber] = @Original_WardNumber)) AND ((@IsNull_WardName = 1 AND [WardName] IS NULL) OR ([WardName] = @Original_WardName)) AND ((@IsNull_Requisionby = 1 AND [Requisionby] IS NULL) OR ([Requisionby] = @Original_Requisionby)) AND ((@IsNull_Requidate = 1 AND [Requidate] IS NULL) OR ([Requidate] = @Original_Requidate)) AND ((@IsNull_ItemNumber = 1 AND [ItemNumber] IS NULL) OR ([ItemNumber] = @Original_ItemNumber)) AND ((@IsNull_Iname = 1 AND [Iname] IS NULL) OR ([Iname] = @Original_Iname)) AND ((@IsNull_DesCrip = 1 AND [DesCrip] IS NULL) OR ([DesCrip] = @Original_DesCrip)) AND ((@IsNull_QunInStock = 1 AND [QunInStock] IS NULL) OR ([QunInStock] = @Original_QunInStock)) AND ((@IsNull_MethOfUse = 1 AND [MethOfUse] IS NULL) OR ([MethOfUse] = @Original_MethOfUse)) AND ((@IsNull_CostperUnit = 1 AND [CostperUnit] IS NULL) OR ([CostperUnit] = @Original_CostperUnit)) AND ((@IsNull_Quanti = 1 AND [Quanti] IS NULL) OR ([Quanti] = @Original_Quanti)) AND ([RequiNO] = @Original_RequiNO));
+SELECT WardNumber, WardName, Requisionby, Requidate, ItemNumber, Iname, DesCrip, QunInStock, MethOfUse, CostperUnit, Quanti, RequiNO FROM RequisitionSur WHERE (RequiNO = @RequiNO)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@WardNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="WardNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@WardName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="WardName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Requisionby" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Requisionby" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Requidate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Requidate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ItemNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ItemNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Iname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Iname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@DesCrip" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DesCrip" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@QunInStock" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="QunInStock" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MethOfUse" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MethOfUse" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CostperUnit" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CostperUnit" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Quanti" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Quanti" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_WardNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WardNumber" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_WardNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="WardNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_WardName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WardName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_WardName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="WardName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Requisionby" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Requisionby" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Requisionby" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Requisionby" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Requidate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Requidate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_Requidate" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Requidate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ItemNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ItemNumber" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ItemNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ItemNumber" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Iname" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Iname" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Iname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Iname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DesCrip" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DesCrip" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_DesCrip" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DesCrip" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_QunInStock" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="QunInStock" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_QunInStock" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="QunInStock" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MethOfUse" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MethOfUse" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_MethOfUse" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MethOfUse" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CostperUnit" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CostperUnit" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CostperUnit" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CostperUnit" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Quanti" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Quanti" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Quanti" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Quanti" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_RequiNO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RequiNO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="RequiNO" ColumnName="RequiNO" DataSourceName="Project.dbo.RequisitionSur" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@RequiNO" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="RequiNO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="WardNumber" DataSetColumn="WardNumber" />
+              <Mapping SourceColumn="WardName" DataSetColumn="WardName" />
+              <Mapping SourceColumn="Requisionby" DataSetColumn="Requisionby" />
+              <Mapping SourceColumn="Requidate" DataSetColumn="Requidate" />
+              <Mapping SourceColumn="ItemNumber" DataSetColumn="ItemNumber" />
+              <Mapping SourceColumn="Iname" DataSetColumn="Iname" />
+              <Mapping SourceColumn="DesCrip" DataSetColumn="DesCrip" />
+              <Mapping SourceColumn="QunInStock" DataSetColumn="QunInStock" />
+              <Mapping SourceColumn="MethOfUse" DataSetColumn="MethOfUse" />
+              <Mapping SourceColumn="CostperUnit" DataSetColumn="CostperUnit" />
+              <Mapping SourceColumn="Quanti" DataSetColumn="Quanti" />
+              <Mapping SourceColumn="RequiNO" DataSetColumn="RequiNO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ProjectDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ProjectDataSet1" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ProjectDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AppointmentView" msprop:Generator_RowEvHandlerName="AppointmentViewRowChangeEventHandler" msprop:Generator_RowDeletedName="AppointmentViewRowDeleted" msprop:Generator_RowDeletingName="AppointmentViewRowDeleting" msprop:Generator_RowEvArgName="AppointmentViewRowChangeEvent" msprop:Generator_TablePropName="AppointmentView" msprop:Generator_RowChangedName="AppointmentViewRowChanged" msprop:Generator_UserTableName="AppointmentView" msprop:Generator_RowChangingName="AppointmentViewRowChanging" msprop:Generator_RowClassName="AppointmentViewRow" msprop:Generator_TableClassName="AppointmentViewDataTable" msprop:Generator_TableVarName="tableAppointmentView">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AppointmentID" msprop:Generator_ColumnPropNameInTable="AppointmentIDColumn" msprop:Generator_ColumnPropNameInRow="AppointmentID" msprop:Generator_UserColumnName="AppointmentID" msprop:Generator_ColumnVarNameInTable="columnAppointmentID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PatientID" msprop:Generator_ColumnPropNameInTable="PatientIDColumn" msprop:Generator_ColumnPropNameInRow="PatientID" msprop:Generator_UserColumnName="PatientID" msprop:Generator_ColumnVarNameInTable="columnPatientID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_UserColumnName="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_UserColumnName="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AppointmentDate" msprop:Generator_ColumnPropNameInTable="AppointmentDateColumn" msprop:Generator_ColumnPropNameInRow="AppointmentDate" msprop:Generator_UserColumnName="AppointmentDate" msprop:Generator_ColumnVarNameInTable="columnAppointmentDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="WardID" msprop:Generator_ColumnPropNameInTable="WardIDColumn" msprop:Generator_ColumnPropNameInRow="WardID" msprop:Generator_UserColumnName="WardID" msprop:Generator_ColumnVarNameInTable="columnWardID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WardName" msprop:Generator_ColumnPropNameInTable="WardNameColumn" msprop:Generator_ColumnPropNameInRow="WardName" msprop:Generator_UserColumnName="WardName" msprop:Generator_ColumnVarNameInTable="columnWardName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Diagnosis" msprop:Generator_ColumnPropNameInTable="DiagnosisColumn" msprop:Generator_ColumnPropNameInRow="Diagnosis" msprop:Generator_UserColumnName="Diagnosis" msprop:Generator_ColumnVarNameInTable="columnDiagnosis" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TreatmentPlan" msprop:Generator_ColumnPropNameInTable="TreatmentPlanColumn" msprop:Generator_ColumnPropNameInRow="TreatmentPlan" msprop:Generator_UserColumnName="TreatmentPlan" msprop:Generator_ColumnVarNameInTable="columnTreatmentPlan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Requisitions" msprop:Generator_RowEvHandlerName="RequisitionsRowChangeEventHandler" msprop:Generator_RowDeletedName="RequisitionsRowDeleted" msprop:Generator_RowDeletingName="RequisitionsRowDeleting" msprop:Generator_RowEvArgName="RequisitionsRowChangeEvent" msprop:Generator_TablePropName="Requisitions" msprop:Generator_RowChangedName="RequisitionsRowChanged" msprop:Generator_UserTableName="Requisitions" msprop:Generator_RowChangingName="RequisitionsRowChanging" msprop:Generator_RowClassName="RequisitionsRow" msprop:Generator_TableClassName="RequisitionsDataTable" msprop:Generator_TableVarName="tableRequisitions">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RequisitionID" msprop:Generator_ColumnPropNameInTable="RequisitionIDColumn" msprop:Generator_ColumnPropNameInRow="RequisitionID" msprop:Generator_UserColumnName="RequisitionID" msprop:Generator_ColumnVarNameInTable="columnRequisitionID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StaffID" msprop:Generator_ColumnPropNameInTable="StaffIDColumn" msprop:Generator_ColumnPropNameInRow="StaffID" msprop:Generator_UserColumnName="StaffID" msprop:Generator_ColumnVarNameInTable="columnStaffID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WardID" msprop:Generator_ColumnPropNameInTable="WardIDColumn" msprop:Generator_ColumnPropNameInRow="WardID" msprop:Generator_UserColumnName="WardID" msprop:Generator_ColumnVarNameInTable="columnWardID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequisitionDate" msprop:Generator_ColumnPropNameInTable="RequisitionDateColumn" msprop:Generator_ColumnPropNameInRow="RequisitionDate" msprop:Generator_UserColumnName="RequisitionDate" msprop:Generator_ColumnVarNameInTable="columnRequisitionDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RequisitionType" msprop:Generator_ColumnPropNameInTable="RequisitionTypeColumn" msprop:Generator_ColumnPropNameInRow="RequisitionType" msprop:Generator_UserColumnName="RequisitionType" msprop:Generator_ColumnVarNameInTable="columnRequisitionType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SupplierID" msprop:Generator_ColumnPropNameInTable="SupplierIDColumn" msprop:Generator_ColumnPropNameInRow="SupplierID" msprop:Generator_UserColumnName="SupplierID" msprop:Generator_ColumnVarNameInTable="columnSupplierID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NonSurgicalSupplies" msprop:Generator_RowEvHandlerName="NonSurgicalSuppliesRowChangeEventHandler" msprop:Generator_RowDeletedName="NonSurgicalSuppliesRowDeleted" msprop:Generator_RowDeletingName="NonSurgicalSuppliesRowDeleting" msprop:Generator_RowEvArgName="NonSurgicalSuppliesRowChangeEvent" msprop:Generator_TablePropName="NonSurgicalSupplies" msprop:Generator_RowChangedName="NonSurgicalSuppliesRowChanged" msprop:Generator_UserTableName="NonSurgicalSupplies" msprop:Generator_RowChangingName="NonSurgicalSuppliesRowChanging" msprop:Generator_RowClassName="NonSurgicalSuppliesRow" msprop:Generator_TableClassName="NonSurgicalSuppliesDataTable" msprop:Generator_TableVarName="tableNonSurgicalSupplies">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SupplyID" msprop:Generator_ColumnPropNameInTable="SupplyIDColumn" msprop:Generator_ColumnPropNameInRow="SupplyID" msprop:Generator_UserColumnName="SupplyID" msprop:Generator_ColumnVarNameInTable="columnSupplyID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SupplierID" msprop:Generator_ColumnPropNameInTable="SupplierIDColumn" msprop:Generator_ColumnPropNameInRow="SupplierID" msprop:Generator_UserColumnName="SupplierID" msprop:Generator_ColumnVarNameInTable="columnSupplierID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemNumber" msprop:Generator_ColumnPropNameInTable="ItemNumberColumn" msprop:Generator_ColumnPropNameInRow="ItemNumber" msprop:Generator_UserColumnName="ItemNumber" msprop:Generator_ColumnVarNameInTable="columnItemNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemName" msprop:Generator_ColumnPropNameInTable="ItemNameColumn" msprop:Generator_ColumnPropNameInRow="ItemName" msprop:Generator_UserColumnName="ItemName" msprop:Generator_ColumnVarNameInTable="columnItemName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemDescription" msprop:Generator_ColumnPropNameInTable="ItemDescriptionColumn" msprop:Generator_ColumnPropNameInRow="ItemDescription" msprop:Generator_UserColumnName="ItemDescription" msprop:Generator_ColumnVarNameInTable="columnItemDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QuantityInStock" msprop:Generator_ColumnPropNameInTable="QuantityInStockColumn" msprop:Generator_ColumnPropNameInRow="QuantityInStock" msprop:Generator_UserColumnName="QuantityInStock" msprop:Generator_ColumnVarNameInTable="columnQuantityInStock" type="xs:int" minOccurs="0" />
+              <xs:element name="ReorderLevel" msprop:Generator_ColumnPropNameInTable="ReorderLevelColumn" msprop:Generator_ColumnPropNameInRow="ReorderLevel" msprop:Generator_UserColumnName="ReorderLevel" msprop:Generator_ColumnVarNameInTable="columnReorderLevel" type="xs:int" minOccurs="0" />
+              <xs:element name="CostPerUnit" msprop:Generator_ColumnPropNameInTable="CostPerUnitColumn" msprop:Generator_ColumnPropNameInRow="CostPerUnit" msprop:Generator_UserColumnName="CostPerUnit" msprop:Generator_ColumnVarNameInTable="columnCostPerUnit" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PharmaceuticalSupplies" msprop:Generator_RowClassName="PharmaceuticalSuppliesRow" msprop:Generator_RowEvHandlerName="PharmaceuticalSuppliesRowChangeEventHandler" msprop:Generator_RowDeletedName="PharmaceuticalSuppliesRowDeleted" msprop:Generator_RowDeletingName="PharmaceuticalSuppliesRowDeleting" msprop:Generator_RowEvArgName="PharmaceuticalSuppliesRowChangeEvent" msprop:Generator_TablePropName="PharmaceuticalSupplies" msprop:Generator_RowChangedName="PharmaceuticalSuppliesRowChanged" msprop:Generator_UserTableName="PharmaceuticalSupplies" msprop:Generator_RowChangingName="PharmaceuticalSuppliesRowChanging" msprop:Generator_TableClassName="PharmaceuticalSuppliesDataTable" msprop:Generator_TableVarName="tablePharmaceuticalSupplies">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SupplyID" msprop:Generator_UserColumnName="SupplyID" msprop:Generator_ColumnPropNameInTable="SupplyIDColumn" msprop:Generator_ColumnPropNameInRow="SupplyID" msprop:Generator_ColumnVarNameInTable="columnSupplyID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SupplierID" msprop:Generator_UserColumnName="SupplierID" msprop:Generator_ColumnPropNameInTable="SupplierIDColumn" msprop:Generator_ColumnPropNameInRow="SupplierID" msprop:Generator_ColumnVarNameInTable="columnSupplierID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DrugNumber" msprop:Generator_UserColumnName="DrugNumber" msprop:Generator_ColumnPropNameInTable="DrugNumberColumn" msprop:Generator_ColumnPropNameInRow="DrugNumber" msprop:Generator_ColumnVarNameInTable="columnDrugNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DrugName" msprop:Generator_UserColumnName="DrugName" msprop:Generator_ColumnPropNameInTable="DrugNameColumn" msprop:Generator_ColumnPropNameInRow="DrugName" msprop:Generator_ColumnVarNameInTable="columnDrugName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dosage" msprop:Generator_UserColumnName="Dosage" msprop:Generator_ColumnPropNameInTable="DosageColumn" msprop:Generator_ColumnPropNameInRow="Dosage" msprop:Generator_ColumnVarNameInTable="columnDosage" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MethodOfAdministration" msprop:Generator_UserColumnName="MethodOfAdministration" msprop:Generator_ColumnPropNameInTable="MethodOfAdministrationColumn" msprop:Generator_ColumnPropNameInRow="MethodOfAdministration" msprop:Generator_ColumnVarNameInTable="columnMethodOfAdministration" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QuantityInStock" msprop:Generator_UserColumnName="QuantityInStock" msprop:Generator_ColumnPropNameInTable="QuantityInStockColumn" msprop:Generator_ColumnPropNameInRow="QuantityInStock" msprop:Generator_ColumnVarNameInTable="columnQuantityInStock" type="xs:int" minOccurs="0" />
+              <xs:element name="ReorderLevel" msprop:Generator_UserColumnName="ReorderLevel" msprop:Generator_ColumnPropNameInTable="ReorderLevelColumn" msprop:Generator_ColumnPropNameInRow="ReorderLevel" msprop:Generator_ColumnVarNameInTable="columnReorderLevel" type="xs:int" minOccurs="0" />
+              <xs:element name="CostPerUnit" msprop:Generator_UserColumnName="CostPerUnit" msprop:Generator_ColumnPropNameInTable="CostPerUnitColumn" msprop:Generator_ColumnPropNameInRow="CostPerUnit" msprop:Generator_ColumnVarNameInTable="columnCostPerUnit" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RequitsitionPhama" msprop:Generator_RowEvHandlerName="RequitsitionPhamaRowChangeEventHandler" msprop:Generator_RowDeletedName="RequitsitionPhamaRowDeleted" msprop:Generator_RowDeletingName="RequitsitionPhamaRowDeleting" msprop:Generator_RowEvArgName="RequitsitionPhamaRowChangeEvent" msprop:Generator_TablePropName="RequitsitionPhama" msprop:Generator_RowChangedName="RequitsitionPhamaRowChanged" msprop:Generator_RowChangingName="RequitsitionPhamaRowChanging" msprop:Generator_TableClassName="RequitsitionPhamaDataTable" msprop:Generator_RowClassName="RequitsitionPhamaRow" msprop:Generator_TableVarName="tableRequitsitionPhama" msprop:Generator_UserTableName="RequitsitionPhama">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="WardNumber" msprop:Generator_ColumnPropNameInRow="WardNumber" msprop:Generator_ColumnPropNameInTable="WardNumberColumn" msprop:Generator_ColumnVarNameInTable="columnWardNumber" msprop:Generator_UserColumnName="WardNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WardName" msprop:Generator_ColumnPropNameInRow="WardName" msprop:Generator_ColumnPropNameInTable="WardNameColumn" msprop:Generator_ColumnVarNameInTable="columnWardName" msprop:Generator_UserColumnName="WardName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Requisitioned_By" msprop:Generator_ColumnPropNameInRow="Requisitioned_By" msprop:Generator_ColumnPropNameInTable="Requisitioned_ByColumn" msprop:Generator_ColumnVarNameInTable="columnRequisitioned_By" msprop:Generator_UserColumnName="Requisitioned_By">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Requisitioned_Date" msprop:Generator_ColumnPropNameInRow="Requisitioned_Date" msprop:Generator_ColumnPropNameInTable="Requisitioned_DateColumn" msprop:Generator_ColumnVarNameInTable="columnRequisitioned_Date" msprop:Generator_UserColumnName="Requisitioned_Date" type="xs:dateTime" />
+              <xs:element name="DrugNumber" msprop:Generator_ColumnPropNameInRow="DrugNumber" msprop:Generator_ColumnPropNameInTable="DrugNumberColumn" msprop:Generator_ColumnVarNameInTable="columnDrugNumber" msprop:Generator_UserColumnName="DrugNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_UserColumnName="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dosage" msprop:Generator_ColumnPropNameInRow="Dosage" msprop:Generator_ColumnPropNameInTable="DosageColumn" msprop:Generator_ColumnVarNameInTable="columnDosage" msprop:Generator_UserColumnName="Dosage">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Method_of_Use" msprop:Generator_ColumnPropNameInRow="Method_of_Use" msprop:Generator_ColumnPropNameInTable="Method_of_UseColumn" msprop:Generator_ColumnVarNameInTable="columnMethod_of_Use" msprop:Generator_UserColumnName="Method_of_Use">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cost_per_Unit" msprop:Generator_ColumnPropNameInRow="Cost_per_Unit" msprop:Generator_ColumnPropNameInTable="Cost_per_UnitColumn" msprop:Generator_ColumnVarNameInTable="columnCost_per_Unit" msprop:Generator_UserColumnName="Cost_per_Unit">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Quantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_UserColumnName="Quantity" type="xs:int" />
+              <xs:element name="Requi" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="Requi" msprop:Generator_ColumnPropNameInTable="RequiColumn" msprop:Generator_ColumnVarNameInTable="columnRequi" msprop:Generator_UserColumnName="Requi" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RequisitionSur" msprop:Generator_RowEvHandlerName="RequisitionSurRowChangeEventHandler" msprop:Generator_RowDeletedName="RequisitionSurRowDeleted" msprop:Generator_RowDeletingName="RequisitionSurRowDeleting" msprop:Generator_RowEvArgName="RequisitionSurRowChangeEvent" msprop:Generator_TablePropName="RequisitionSur" msprop:Generator_RowChangedName="RequisitionSurRowChanged" msprop:Generator_RowChangingName="RequisitionSurRowChanging" msprop:Generator_TableClassName="RequisitionSurDataTable" msprop:Generator_RowClassName="RequisitionSurRow" msprop:Generator_TableVarName="tableRequisitionSur" msprop:Generator_UserTableName="RequisitionSur">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="WardNumber" msprop:Generator_ColumnPropNameInRow="WardNumber" msprop:Generator_ColumnPropNameInTable="WardNumberColumn" msprop:Generator_ColumnVarNameInTable="columnWardNumber" msprop:Generator_UserColumnName="WardNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WardName" msprop:Generator_ColumnPropNameInRow="WardName" msprop:Generator_ColumnPropNameInTable="WardNameColumn" msprop:Generator_ColumnVarNameInTable="columnWardName" msprop:Generator_UserColumnName="WardName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Requisionby" msprop:Generator_ColumnPropNameInRow="Requisionby" msprop:Generator_ColumnPropNameInTable="RequisionbyColumn" msprop:Generator_ColumnVarNameInTable="columnRequisionby" msprop:Generator_UserColumnName="Requisionby" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Requidate" msprop:Generator_ColumnPropNameInRow="Requidate" msprop:Generator_ColumnPropNameInTable="RequidateColumn" msprop:Generator_ColumnVarNameInTable="columnRequidate" msprop:Generator_UserColumnName="Requidate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ItemNumber" msprop:Generator_ColumnPropNameInRow="ItemNumber" msprop:Generator_ColumnPropNameInTable="ItemNumberColumn" msprop:Generator_ColumnVarNameInTable="columnItemNumber" msprop:Generator_UserColumnName="ItemNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Iname" msprop:Generator_ColumnPropNameInRow="Iname" msprop:Generator_ColumnPropNameInTable="InameColumn" msprop:Generator_ColumnVarNameInTable="columnIname" msprop:Generator_UserColumnName="Iname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DesCrip" msprop:Generator_ColumnPropNameInRow="DesCrip" msprop:Generator_ColumnPropNameInTable="DesCripColumn" msprop:Generator_ColumnVarNameInTable="columnDesCrip" msprop:Generator_UserColumnName="DesCrip" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QunInStock" msprop:Generator_ColumnPropNameInRow="QunInStock" msprop:Generator_ColumnPropNameInTable="QunInStockColumn" msprop:Generator_ColumnVarNameInTable="columnQunInStock" msprop:Generator_UserColumnName="QunInStock" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MethOfUse" msprop:Generator_ColumnPropNameInRow="MethOfUse" msprop:Generator_ColumnPropNameInTable="MethOfUseColumn" msprop:Generator_ColumnVarNameInTable="columnMethOfUse" msprop:Generator_UserColumnName="MethOfUse" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CostperUnit" msprop:Generator_ColumnPropNameInRow="CostperUnit" msprop:Generator_ColumnPropNameInTable="CostperUnitColumn" msprop:Generator_ColumnVarNameInTable="columnCostperUnit" msprop:Generator_UserColumnName="CostperUnit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Quanti" msprop:Generator_ColumnPropNameInRow="Quanti" msprop:Generator_ColumnPropNameInTable="QuantiColumn" msprop:Generator_ColumnVarNameInTable="columnQuanti" msprop:Generator_UserColumnName="Quanti" type="xs:int" minOccurs="0" />
+              <xs:element name="RequiNO" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="RequiNO" msprop:Generator_ColumnPropNameInTable="RequiNOColumn" msprop:Generator_ColumnVarNameInTable="columnRequiNO" msprop:Generator_UserColumnName="RequiNO" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AppointmentView" />
+      <xs:field xpath="mstns:AppointmentID" />
+    </xs:unique>
+    <xs:unique name="Requisitions_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Requisitions" />
+      <xs:field xpath="mstns:RequisitionID" />
+    </xs:unique>
+    <xs:unique name="NonSurgicalSupplies_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:NonSurgicalSupplies" />
+      <xs:field xpath="mstns:SupplyID" />
+    </xs:unique>
+    <xs:unique name="PharmaceuticalSupplies_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PharmaceuticalSupplies" />
+      <xs:field xpath="mstns:SupplyID" />
+    </xs:unique>
+    <xs:unique name="RequitsitionPhama_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:RequitsitionPhama" />
+      <xs:field xpath="mstns:Requi" />
+    </xs:unique>
+    <xs:unique name="RequisitionSur_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:RequisitionSur" />
+      <xs:field xpath="mstns:RequiNO" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

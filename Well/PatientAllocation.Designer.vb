@@ -22,226 +22,254 @@ Partial Class PatientAllocation
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(PatientAllocation))
-        DataGridView1 = New DataGridView()
-        ButDelete = New Button()
-        butEdit = New Button()
-        butAdd = New Button()
-        LabelPatients = New Label()
-        txtBoxWard = New TextBox()
-        txtBoxDischarge = New TextBox()
-        txtBoxAllocateDate = New TextBox()
-        wardtoallocate = New Label()
-        weekend = New Label()
-        weekbegin = New Label()
-        txtBoxPatient = New TextBox()
-        staffid = New Label()
-        txtboxsearch = New TextBox()
-        txtAllocationID = New TextBox()
-        Label1 = New Label()
-        Panel1 = New Panel()
-        btnsearchpatientallo = New PictureBox()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
-        Panel1.SuspendLayout()
-        CType(btnsearchpatientallo, ComponentModel.ISupportInitialize).BeginInit()
-        SuspendLayout()
-        ' 
-        ' DataGridView1
-        ' 
-        DataGridView1.BorderStyle = BorderStyle.Fixed3D
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(47, 279)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.RowHeadersWidth = 51
-        DataGridView1.RowTemplate.Height = 25
-        DataGridView1.Size = New Size(981, 253)
-        DataGridView1.TabIndex = 45
-        ' 
-        ' ButDelete
-        ' 
-        ButDelete.BackColor = Color.FromArgb(CByte(252), CByte(136), CByte(136))
-        ButDelete.Location = New Point(614, 241)
-        ButDelete.Name = "ButDelete"
-        ButDelete.Size = New Size(75, 23)
-        ButDelete.TabIndex = 44
-        ButDelete.Text = "DELETE"
-        ButDelete.UseVisualStyleBackColor = False
-        ' 
-        ' butEdit
-        ' 
-        butEdit.BackColor = Color.FromArgb(CByte(241), CByte(227), CByte(86))
-        butEdit.Location = New Point(506, 241)
-        butEdit.Name = "butEdit"
-        butEdit.Size = New Size(75, 23)
-        butEdit.TabIndex = 43
-        butEdit.Text = "EDIT"
-        butEdit.UseVisualStyleBackColor = False
-        ' 
-        ' butAdd
-        ' 
-        butAdd.BackColor = Color.FromArgb(CByte(179), CByte(255), CByte(143))
-        butAdd.Location = New Point(394, 241)
-        butAdd.Name = "butAdd"
-        butAdd.Size = New Size(75, 23)
-        butAdd.TabIndex = 42
-        butAdd.Text = "ADD"
-        butAdd.UseVisualStyleBackColor = False
-        ' 
-        ' LabelPatients
-        ' 
-        LabelPatients.AutoSize = True
-        LabelPatients.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
-        LabelPatients.ForeColor = SystemColors.WindowText
-        LabelPatients.Location = New Point(408, 9)
-        LabelPatients.Name = "LabelPatients"
-        LabelPatients.Size = New Size(247, 30)
-        LabelPatients.TabIndex = 25
-        LabelPatients.Text = "PATIENTS ALLOCATION"
-        ' 
-        ' txtBoxWard
-        ' 
-        txtBoxWard.BorderStyle = BorderStyle.FixedSingle
-        txtBoxWard.Location = New Point(756, 36)
-        txtBoxWard.Name = "txtBoxWard"
-        txtBoxWard.Size = New Size(144, 23)
-        txtBoxWard.TabIndex = 64
-        ' 
-        ' txtBoxDischarge
-        ' 
-        txtBoxDischarge.BorderStyle = BorderStyle.FixedSingle
-        txtBoxDischarge.Location = New Point(434, 101)
-        txtBoxDischarge.Name = "txtBoxDischarge"
-        txtBoxDischarge.Size = New Size(143, 23)
-        txtBoxDischarge.TabIndex = 63
-        ' 
-        ' txtBoxAllocateDate
-        ' 
-        txtBoxAllocateDate.BorderStyle = BorderStyle.FixedSingle
-        txtBoxAllocateDate.Location = New Point(139, 100)
-        txtBoxAllocateDate.Name = "txtBoxAllocateDate"
-        txtBoxAllocateDate.Size = New Size(128, 23)
-        txtBoxAllocateDate.TabIndex = 62
-        ' 
-        ' wardtoallocate
-        ' 
-        wardtoallocate.AutoSize = True
-        wardtoallocate.Location = New Point(645, 39)
-        wardtoallocate.Name = "wardtoallocate"
-        wardtoallocate.Size = New Size(102, 15)
-        wardtoallocate.TabIndex = 61
-        wardtoallocate.Text = "Ward To Allocate :"
-        ' 
-        ' weekend
-        ' 
-        weekend.AutoSize = True
-        weekend.Location = New Point(326, 103)
-        weekend.Name = "weekend"
-        weekend.Size = New Size(95, 15)
-        weekend.TabIndex = 59
-        weekend.Text = "Discharge Date  :"
-        ' 
-        ' weekbegin
-        ' 
-        weekbegin.AutoSize = True
-        weekbegin.Location = New Point(44, 103)
-        weekbegin.Name = "weekbegin"
-        weekbegin.Size = New Size(83, 15)
-        weekbegin.TabIndex = 57
-        weekbegin.Text = "Allocate Date :"
-        ' 
-        ' txtBoxPatient
-        ' 
-        txtBoxPatient.BorderStyle = BorderStyle.FixedSingle
-        txtBoxPatient.Location = New Point(434, 37)
-        txtBoxPatient.Name = "txtBoxPatient"
-        txtBoxPatient.Size = New Size(143, 23)
-        txtBoxPatient.TabIndex = 56
-        ' 
-        ' staffid
-        ' 
-        staffid.AutoSize = True
-        staffid.Location = New Point(362, 39)
-        staffid.Name = "staffid"
-        staffid.Size = New Size(61, 15)
-        staffid.TabIndex = 55
-        staffid.Text = "PatientID :"
-        ' 
-        ' txtboxsearch
-        ' 
-        txtboxsearch.BorderStyle = BorderStyle.FixedSingle
-        txtboxsearch.Location = New Point(843, 246)
-        txtboxsearch.Name = "txtboxsearch"
-        txtboxsearch.Size = New Size(143, 23)
-        txtboxsearch.TabIndex = 65
-        ' 
-        ' txtAllocationID
-        ' 
-        txtAllocationID.BorderStyle = BorderStyle.FixedSingle
-        txtAllocationID.Location = New Point(139, 36)
-        txtAllocationID.Name = "txtAllocationID"
-        txtAllocationID.Size = New Size(128, 23)
-        txtAllocationID.TabIndex = 67
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Location = New Point(50, 39)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(81, 15)
-        Label1.TabIndex = 66
-        Label1.Text = "Allocation ID :"
-        ' 
-        ' Panel1
-        ' 
-        Panel1.Controls.Add(txtAllocationID)
-        Panel1.Controls.Add(weekbegin)
-        Panel1.Controls.Add(txtBoxWard)
-        Panel1.Controls.Add(wardtoallocate)
-        Panel1.Controls.Add(Label1)
-        Panel1.Controls.Add(txtBoxDischarge)
-        Panel1.Controls.Add(txtBoxAllocateDate)
-        Panel1.Controls.Add(txtBoxPatient)
-        Panel1.Controls.Add(weekend)
-        Panel1.Controls.Add(staffid)
-        Panel1.Location = New Point(47, 52)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(981, 172)
-        Panel1.TabIndex = 68
-        ' 
-        ' btnsearchpatientallo
-        ' 
-        btnsearchpatientallo.Image = CType(resources.GetObject("btnsearchpatientallo.Image"), Image)
-        btnsearchpatientallo.Location = New Point(992, 246)
-        btnsearchpatientallo.Name = "btnsearchpatientallo"
-        btnsearchpatientallo.Size = New Size(36, 23)
-        btnsearchpatientallo.SizeMode = PictureBoxSizeMode.Zoom
-        btnsearchpatientallo.TabIndex = 70
-        btnsearchpatientallo.TabStop = False
-        ' 
-        ' PatientAllocation
-        ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
-        BackColor = SystemColors.ControlLightLight
-        ClientSize = New Size(1093, 544)
-        Controls.Add(btnsearchpatientallo)
-        Controls.Add(Panel1)
-        Controls.Add(txtboxsearch)
-        Controls.Add(DataGridView1)
-        Controls.Add(ButDelete)
-        Controls.Add(butEdit)
-        Controls.Add(butAdd)
-        Controls.Add(LabelPatients)
-        FormBorderStyle = FormBorderStyle.None
-        Margin = New Padding(3, 2, 3, 2)
-        Name = "PatientAllocation"
-        Text = "PatientAllocation"
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
-        Panel1.ResumeLayout(False)
-        Panel1.PerformLayout()
-        CType(btnsearchpatientallo, ComponentModel.ISupportInitialize).EndInit()
-        ResumeLayout(False)
-        PerformLayout()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PatientAllocation))
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ButDelete = New System.Windows.Forms.Button()
+        Me.butEdit = New System.Windows.Forms.Button()
+        Me.butAdd = New System.Windows.Forms.Button()
+        Me.LabelPatients = New System.Windows.Forms.Label()
+        Me.txtBoxWard = New System.Windows.Forms.TextBox()
+        Me.wardtoallocate = New System.Windows.Forms.Label()
+        Me.weekend = New System.Windows.Forms.Label()
+        Me.weekbegin = New System.Windows.Forms.Label()
+        Me.txtBoxPatient = New System.Windows.Forms.TextBox()
+        Me.staffid = New System.Windows.Forms.Label()
+        Me.txtboxsearch = New System.Windows.Forms.TextBox()
+        Me.txtAllocationID = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.DateTimeDis = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimeAllocate = New System.Windows.Forms.DateTimePicker()
+        Me.btnsearchpatientallo = New System.Windows.Forms.PictureBox()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnsearchpatientallo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(40, 242)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 25
+        Me.DataGridView1.Size = New System.Drawing.Size(986, 310)
+        Me.DataGridView1.TabIndex = 45
+        '
+        'ButDelete
+        '
+        Me.ButDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(136, Byte), Integer))
+        Me.ButDelete.Location = New System.Drawing.Point(622, 209)
+        Me.ButDelete.Name = "ButDelete"
+        Me.ButDelete.Size = New System.Drawing.Size(64, 20)
+        Me.ButDelete.TabIndex = 44
+        Me.ButDelete.Text = "DELETE"
+        Me.ButDelete.UseVisualStyleBackColor = False
+        '
+        'butEdit
+        '
+        Me.butEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(227, Byte), Integer), CType(CType(86, Byte), Integer))
+        Me.butEdit.Location = New System.Drawing.Point(530, 209)
+        Me.butEdit.Name = "butEdit"
+        Me.butEdit.Size = New System.Drawing.Size(64, 20)
+        Me.butEdit.TabIndex = 43
+        Me.butEdit.Text = "EDIT"
+        Me.butEdit.UseVisualStyleBackColor = False
+        '
+        'butAdd
+        '
+        Me.butAdd.BackColor = System.Drawing.Color.FromArgb(CType(CType(179, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(143, Byte), Integer))
+        Me.butAdd.Location = New System.Drawing.Point(434, 209)
+        Me.butAdd.Name = "butAdd"
+        Me.butAdd.Size = New System.Drawing.Size(64, 20)
+        Me.butAdd.TabIndex = 42
+        Me.butAdd.Text = "ADD"
+        Me.butAdd.UseVisualStyleBackColor = False
+        '
+        'LabelPatients
+        '
+        Me.LabelPatients.AutoSize = True
+        Me.LabelPatients.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.LabelPatients.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.LabelPatients.Location = New System.Drawing.Point(429, 9)
+        Me.LabelPatients.Name = "LabelPatients"
+        Me.LabelPatients.Size = New System.Drawing.Size(247, 30)
+        Me.LabelPatients.TabIndex = 25
+        Me.LabelPatients.Text = "PATIENTS ALLOCATION"
+        '
+        'txtBoxWard
+        '
+        Me.txtBoxWard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtBoxWard.Location = New System.Drawing.Point(813, 30)
+        Me.txtBoxWard.Name = "txtBoxWard"
+        Me.txtBoxWard.Size = New System.Drawing.Size(124, 20)
+        Me.txtBoxWard.TabIndex = 64
+        '
+        'wardtoallocate
+        '
+        Me.wardtoallocate.AutoSize = True
+        Me.wardtoallocate.Location = New System.Drawing.Point(718, 33)
+        Me.wardtoallocate.Name = "wardtoallocate"
+        Me.wardtoallocate.Size = New System.Drawing.Size(96, 13)
+        Me.wardtoallocate.TabIndex = 61
+        Me.wardtoallocate.Text = "Ward To Allocate :"
+        '
+        'weekend
+        '
+        Me.weekend.AutoSize = True
+        Me.weekend.Location = New System.Drawing.Point(368, 88)
+        Me.weekend.Name = "weekend"
+        Me.weekend.Size = New System.Drawing.Size(90, 13)
+        Me.weekend.TabIndex = 59
+        Me.weekend.Text = "Discharge Date  :"
+        '
+        'weekbegin
+        '
+        Me.weekbegin.AutoSize = True
+        Me.weekbegin.Location = New System.Drawing.Point(38, 89)
+        Me.weekbegin.Name = "weekbegin"
+        Me.weekbegin.Size = New System.Drawing.Size(77, 13)
+        Me.weekbegin.TabIndex = 57
+        Me.weekbegin.Text = "Allocate Date :"
+        '
+        'txtBoxPatient
+        '
+        Me.txtBoxPatient.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtBoxPatient.Location = New System.Drawing.Point(463, 30)
+        Me.txtBoxPatient.Name = "txtBoxPatient"
+        Me.txtBoxPatient.Size = New System.Drawing.Size(123, 20)
+        Me.txtBoxPatient.TabIndex = 56
+        '
+        'staffid
+        '
+        Me.staffid.AutoSize = True
+        Me.staffid.Location = New System.Drawing.Point(401, 32)
+        Me.staffid.Name = "staffid"
+        Me.staffid.Size = New System.Drawing.Size(57, 13)
+        Me.staffid.TabIndex = 55
+        Me.staffid.Text = "PatientID :"
+        '
+        'txtboxsearch
+        '
+        Me.txtboxsearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtboxsearch.Location = New System.Drawing.Point(870, 211)
+        Me.txtboxsearch.Name = "txtboxsearch"
+        Me.txtboxsearch.Size = New System.Drawing.Size(123, 20)
+        Me.txtboxsearch.TabIndex = 65
+        '
+        'txtAllocationID
+        '
+        Me.txtAllocationID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtAllocationID.Location = New System.Drawing.Point(119, 31)
+        Me.txtAllocationID.Name = "txtAllocationID"
+        Me.txtAllocationID.Size = New System.Drawing.Size(110, 20)
+        Me.txtAllocationID.TabIndex = 67
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(43, 34)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(73, 13)
+        Me.Label1.TabIndex = 66
+        Me.Label1.Text = "Allocation ID :"
+        '
+        'Panel1
+        '
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.PictureBox2)
+        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.DateTimeDis)
+        Me.Panel1.Controls.Add(Me.DateTimeAllocate)
+        Me.Panel1.Controls.Add(Me.txtAllocationID)
+        Me.Panel1.Controls.Add(Me.weekbegin)
+        Me.Panel1.Controls.Add(Me.txtBoxWard)
+        Me.Panel1.Controls.Add(Me.wardtoallocate)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.txtBoxPatient)
+        Me.Panel1.Controls.Add(Me.weekend)
+        Me.Panel1.Controls.Add(Me.staffid)
+        Me.Panel1.Location = New System.Drawing.Point(40, 45)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(986, 149)
+        Me.Panel1.TabIndex = 68
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(943, 30)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(31, 20)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 71
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(592, 29)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(31, 20)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 71
+        Me.PictureBox1.TabStop = False
+        '
+        'DateTimeDis
+        '
+        Me.DateTimeDis.Location = New System.Drawing.Point(461, 88)
+        Me.DateTimeDis.Name = "DateTimeDis"
+        Me.DateTimeDis.Size = New System.Drawing.Size(123, 20)
+        Me.DateTimeDis.TabIndex = 69
+        '
+        'DateTimeAllocate
+        '
+        Me.DateTimeAllocate.Location = New System.Drawing.Point(119, 88)
+        Me.DateTimeAllocate.Name = "DateTimeAllocate"
+        Me.DateTimeAllocate.Size = New System.Drawing.Size(110, 20)
+        Me.DateTimeAllocate.TabIndex = 68
+        '
+        'btnsearchpatientallo
+        '
+        Me.btnsearchpatientallo.Image = CType(resources.GetObject("btnsearchpatientallo.Image"), System.Drawing.Image)
+        Me.btnsearchpatientallo.Location = New System.Drawing.Point(997, 211)
+        Me.btnsearchpatientallo.Name = "btnsearchpatientallo"
+        Me.btnsearchpatientallo.Size = New System.Drawing.Size(31, 20)
+        Me.btnsearchpatientallo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnsearchpatientallo.TabIndex = 70
+        Me.btnsearchpatientallo.TabStop = False
+        '
+        'PatientAllocation
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(1073, 602)
+        Me.Controls.Add(Me.btnsearchpatientallo)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.txtboxsearch)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.ButDelete)
+        Me.Controls.Add(Me.butEdit)
+        Me.Controls.Add(Me.butAdd)
+        Me.Controls.Add(Me.LabelPatients)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Name = "PatientAllocation"
+        Me.Text = "PatientAllocation"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnsearchpatientallo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
@@ -250,8 +278,6 @@ Partial Class PatientAllocation
     Friend WithEvents butAdd As Button
     Friend WithEvents LabelPatients As Label
     Friend WithEvents txtBoxWard As TextBox
-    Friend WithEvents txtBoxDischarge As TextBox
-    Friend WithEvents txtBoxAllocateDate As TextBox
     Friend WithEvents wardtoallocate As Label
     Friend WithEvents weekend As Label
     Friend WithEvents weekbegin As Label
@@ -262,4 +288,8 @@ Partial Class PatientAllocation
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnsearchpatientallo As PictureBox
+    Friend WithEvents DateTimeDis As DateTimePicker
+    Friend WithEvents DateTimeAllocate As DateTimePicker
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

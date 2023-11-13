@@ -25,11 +25,18 @@
 
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        selectedMenuItem = dashboard
+        dashboard.BackColor = Color.Red
+        Dim dash = New Dashboard()
+        switchForm(dash)
+
+    End Sub
+
+    Private Sub Staff_Dash()
         selectedMenuItem = STAFFToolStripMenuItem
         STAFFToolStripMenuItem.BackColor = Color.Red
         Dim Staff = New Staff()
         switchForm(Staff)
-
     End Sub
 
     Private Sub FormWard(sender As Object, e As EventArgs) Handles wardnav.Click
@@ -144,5 +151,12 @@
         Dim SurgicalSupply = New supplySurgical()
         SurgicalSupply.StartPosition = FormStartPosition.CenterParent
         switchForm(SurgicalSupply)
+    End Sub
+
+    Private Sub dashboard_Click(sender As Object, e As EventArgs) Handles dashboard.Click
+        SetMenuItemBackgroundColor(dashboard)
+
+        Dim ds = New Dashboard()
+        switchForm(ds)
     End Sub
 End Class
