@@ -70,4 +70,8 @@ If you have questions or concerns about this database system or need assistance 
    - Line ID: 3304426850
    - Gmail: thebintlife@gmail.com or B6428259@g.sut.ac.th
 
+## License
+
+This project is licensed under the [MIT License](LICENSE.md).
+
 Disclaimer: The information and database system provided in this document are protected by copyright and legal limitations. This data has been developed for the 1101173 Project in Database Administration course at Suranaree University of Technology and is intended for use solely within the scope of this project. Unauthorized use or activities that violate copyright or other laws may result in legal responsibility. Users should exercise caution and comply with relevant laws and regulations when using this data or system. This data and system should only be used for legitimate purposes and should not be used for commercial or malicious purposes, causing harm or legal violations. Users are responsible for legal compliance when using this data and system.
