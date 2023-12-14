@@ -81,20 +81,20 @@ The Wellmeadows Hospital Database System project was developed collaboratively b
    - Email: ronnasit.tuayton@gmail.com
 
 2. **Piya Rongnaimueang**
-   - GitHub:
-   - Email: 
+   - GitHub: [yopiya](https://github.com/yopiya)
+   - Email: point_point@outlook.com
 
 3. **Siwawet Wongsabut**
-   - GitHub: 
-   - Email: 
+   - GitHub: [WinzXIII](https://github.com/WinzXIII)
+   - Email: siwawet.wongsabut@gmail.com
 
 4. **Natchaya Suklad**
-   - GitHub:
-   - Email:
+   - GitHub: [NatchayaSU](https://github.com/NatchayaSU)
+   - Email: natchaya.suklad@gmail.com
 
 5. **Phatthraphon Phomngern**
-   - GitHub:
-   - Email:
+   - GitHub: [kung2002](https://github.com/kung2002)
+   - Email: B6423087@g.sut.ac.th
 
 These individuals have dedicated their time and expertise to the development and improvement of the Wellmeadows Hospital Database System. The project is made possible through their collaborative efforts and commitment to creating a robust and efficient database management system for Wellmeadows Hospital.
 
