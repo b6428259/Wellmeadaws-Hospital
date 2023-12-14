@@ -17,7 +17,7 @@ To ensure the efficiency of the project, here is the installation and usage guid
 
 2. **Download the Project:**
    - Download the program from the Zip file.
-   - Alternatively, copy or download the project from our GitHub repository (https://github.com/b6428259).
+   - Alternatively, copy or download the project from our GitHub repository ([Wellmeadaws-Hospital](https://github.com/b6428259/Wellmeadaws-Hospital)).
 
 3. **Create the Database:**
    1. The provided program already has a database uploaded to the Cloud without the need to change the Connection String.
@@ -33,7 +33,7 @@ To ensure the efficiency of the project, here is the installation and usage guid
 1. **Open the Project:**
    - Open Visual Studio 2022.
    - Select "File" > "Open" > "Project/Solution" and choose the downloaded project file.
-   - Alternatively, you can select "Clone a repository" and enter the repository location (https://github.com/b6428259) and path according to your preference.
+   - Alternatively, you can select "Clone a repository" and enter the repository location ([Wellmeadaws-Hospital](https://github.com/b6428259/Wellmeadaws-Hospital)) and path according to your preference.
 
 2. **Edit the Code:**
    - You can edit the project code to customize the system as needed.
